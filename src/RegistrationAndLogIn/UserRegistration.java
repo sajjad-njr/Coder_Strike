@@ -4,8 +4,10 @@ public class UserRegistration {
     public static void main(String[] args) {
 
         UserInformation obj = new UserInformation();
-
-        obj.takeInfo();
-        obj.showInfo();
+        FilePutUserData obj2 = new FilePutUserData();
+        obj2.takeInfo();
+        //obj.showInfo();
+      // obj2.showInfo();
+       // obj2.showInfo("sajjad","sam","da","fas","fd");
     }
 }

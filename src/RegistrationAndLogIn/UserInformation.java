@@ -3,11 +3,12 @@ package RegistrationAndLogIn;
 import java.util.Scanner;
 
 public class UserInformation {
-    String firstName;
-    String lastName;
-    String phoneNumber;
-    String email;
-    String setPassword;
+
+    public String firstName;
+    public String lastName;
+    public String phoneNumber;
+    public String email;
+    public String setPassword;
 
     Scanner input = new Scanner(System.in);
     public UserInformation()
@@ -29,7 +30,29 @@ public class UserInformation {
         this.setPassword = setPassword;
 
     }
-    public  void takeInfo()
+/*
+    public String getFirstname()
+    {
+        return firstName;
+    }
+    public String getLastname()
+    {
+        return lastName;
+    }
+    public String getPhoneNumber()
+    {
+        return phoneNumber;
+    }
+    public String getEmail()
+    {
+        return email;
+    }
+    public String getSetPassword()
+    {
+        return setPassword;
+    }
+*/
+    public void takeInfo()
     {
         System.out.println("Enter your First name : ");
         firstName = input.nextLine();
@@ -40,11 +63,13 @@ public class UserInformation {
         System.out.println("Enter your email id  : ");
         email = input.nextLine();
         System.out.println("Set your Password : ");
-         setPassword = input.nextLine();
+        setPassword = input.nextLine();
+
+       // showInfo( firstName,lastName,phoneNumber , email , setPassword);
 
     }
 
-    public  void showInfo()
+    public void showInfo(String firstName,String lastName,String phoneNumber , String email , String setPassword)
     {
         System.out.println("***************************************************************");
         System.out.println("Your First name : "+firstName);
