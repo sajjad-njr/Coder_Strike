@@ -210,6 +210,24 @@ public class ElectronicsMain {
                     ac_ob.acInfo();
                                          
                  } 
+                 if(choose == 3){ // this is for camera info
+                     
+                     System.out.println("\n\tCamera Information");
+                     System.out.println("\t------------------");
+                     
+                    Other camera_ob = new OtherInfo();
+                    camera_ob.cameraInfo();
+                                         
+                 } 
+                 if(choose == 4){ // this is for Smart watch info
+                     
+                     System.out.println("\n\tSmart Watch Information");
+                     System.out.println("\t-----------------------");
+                     
+                    Other smartWatchInfo_ob = new OtherInfo();
+                    smartWatchInfo_ob.smartWatchInfo();
+                                         
+                 } 
                  
                  
              }

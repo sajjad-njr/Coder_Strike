@@ -28,12 +28,17 @@ public class OtherInfo implements Other{
 
     @Override
     public void cameraInfo() {
-        
+       System.out.println("\n\tName: 1. Canon EOS 80D DSLR Camera with 18-135mm IS USM Lens\n\tModel: Canon EOS 80D\n\tDIGIC 6 Image Processor\n\tPrice BDT : 98,000");
+       System.out.println("\n\tName: 2. Nikon D5600 DSLR Camera with 18-55mm Lens\n\tModel: Nikon D5600\n\tEXPEED 4 Image Processor\n\tPrice BDT : 61,500");
+       System.out.println("\n\tName: 3. CANON EOS 2000D 24.1MP WITH 18-55MM KIT LENS FULL HD\n\tModel: Canon 2000D\n\tType Processor TDIGIC 4+\n\tPrice BDT : 41,500");
+       System.out.println("\n\tName: 4. Nikon D500 DSLR Camera (only body)\n\tModel: Nikon D500\n\tEXPEED 5 Image Processor\n\tPrice BDT : 1,45,000");
     }
 
     @Override
     public void smartWatchInfo() {
-        
+       System.out.println("\n\tName: 1. Apple Watch SE (MYDM2LL/A) GPS 40mm Sport Band\n\tModel: Apple Watch SE\n\tDigital Crown with Haptic Feedback\n\tPrice BDT : 30,900");
+       System.out.println("\n\tName: 2. Xiaomi Haylou LS02 Touch Screen Square Shape Smart Watch Black\n\tModel:  Xiaomi Haylou LS02\n\t20 days of endurance\n\tPrice BDT : 25,50");
+       System.out.println("\n\tName: 3. Realme RMA161 1.4\" Square Activity Tracker Smart Watch Black\n\tModel: Realme RMA161\n\tUp to 9 Day Battery Life\n\tPrice BDT : 38,500");
     }    
     
 }
