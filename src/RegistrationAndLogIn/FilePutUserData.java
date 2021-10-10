@@ -16,6 +16,7 @@ public class FilePutUserData extends UserInformation{
     public void takeInfo()
     {
         ReadDataFroFromFile ob3 = new ReadDataFroFromFile();
+        LogIn obj33 = new LogIn();
 
         try{
             // PrintWriter pw = new PrintWriter(new FileWriter("UserBioData.txt"));
@@ -35,15 +36,25 @@ public class FilePutUserData extends UserInformation{
 
             System.out.println("Set your Password : ");
             setPassword = input.nextLine();
-
-            //showInfo( firstName,lastName,phoneNumber , email , setPassword);
+            //data show directly from control input 
+            showInfo( firstName,lastName,phoneNumber , email , setPassword);
             // Set from file
             fileInputUserData(firstName,lastName,phoneNumber , email , setPassword);
-            System.out.print("Enter '1' for show your set up Data : ");
+            //LogIn.dataKeepFromFile(firstName,lastName,setPassword);
+            System.out.print("'1' for show set up data \n'2' for log in ");
             int n;
             n = input.nextInt();
             if(n ==  1)
                 ob3.outputDataFromFile(firstName,lastName);//data show direct from file
+            else if(n == 2)
+            {
+                //LogIn.dataKeepFromFile(firstName,lastName,setPassword);
+               // System.out.println("Welcome again");
+                if(obj33.takeDataFromFile()) //that means true
+                {
+                    System.out.println("Go Forward ");
+                }
+            }
             else
                 System.out.println("Wrong Choice ");
             //sucessfully work Alhmadullilah
@@ -79,11 +90,11 @@ public class FilePutUserData extends UserInformation{
         //here create new file that consist of user first and last name
         try(PrintWriter pw = new PrintWriter(new FileWriter(firstName+lastName+".txt"))) {
             //PrintWriter pw = new PrintWriter(new FileWriter("UserBioData.txt"));
-            pw.write("First Name : "+firstName + "\n");
-            pw.write("Last Name : "+lastName + "\n");
-            pw.write("Phone Number : "+phoneNumber + "\n");
-            pw.write("Email : "+email + "\n");
-            pw.write("Password: "+setPassword + "\n");
+            pw.write(firstName +"\n");
+            pw.write(lastName +"\n");
+            pw.write(phoneNumber +"\n");
+            pw.write(email +"\n");
+            pw.write(setPassword +"\n");
         } catch (IOException e) {
             e.printStackTrace();
         }

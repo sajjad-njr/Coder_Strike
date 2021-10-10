@@ -1,5 +1,5 @@
-First Name : Md
-Last Name : Sajjad
-Phone Number : 01892332435
-Email : cse_2012020299@lus.ac.bd
-Password: mababa1020
+Md
+Sajjad
+01892332435
+cse_2012020299@lus.ac.bd
+mababa1020

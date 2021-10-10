@@ -4,7 +4,7 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.util.Scanner;
 
-class ReadDataFroFromFile implements  ReadDataInterface {
+public class ReadDataFroFromFile implements  ReadDataInterface {
     @Override
     public void outputDataFromFile(String firstName, String lastName) {
 
