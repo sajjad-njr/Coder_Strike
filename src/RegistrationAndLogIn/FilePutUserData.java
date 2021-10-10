@@ -15,6 +15,8 @@ public class FilePutUserData extends UserInformation{
     @Override
     public void takeInfo()
     {
+        ReadDataFroFromFile ob3 = new ReadDataFroFromFile();
+
         try{
             // PrintWriter pw = new PrintWriter(new FileWriter("UserBioData.txt"));
 
@@ -34,8 +36,19 @@ public class FilePutUserData extends UserInformation{
             System.out.println("Set your Password : ");
             setPassword = input.nextLine();
 
-            showInfo( firstName,lastName,phoneNumber , email , setPassword);
+            //showInfo( firstName,lastName,phoneNumber , email , setPassword);
+            // Set from file
             fileInputUserData(firstName,lastName,phoneNumber , email , setPassword);
+            System.out.print("Enter '1' for show your set up Data : ");
+            int n;
+            n = input.nextInt();
+            if(n ==  1)
+                ob3.outputDataFromFile(firstName,lastName);//data show direct from file
+            else
+                System.out.println("Wrong Choice ");
+            //sucessfully work Alhmadullilah
+
+
         }catch (Exception e)
         {
             e.printStackTrace();
@@ -43,6 +56,7 @@ public class FilePutUserData extends UserInformation{
 
 
     }
+    //data show direct from console Input
     @Override
     public void showInfo(String firstName,String lastName,String phoneNumber , String email , String setPassword)
     {
