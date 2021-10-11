@@ -13,6 +13,7 @@ import java.util.Scanner;
 public class LogIn {
 
     Scanner input = new Scanner(System.in);
+
     public boolean takeDataFromFile() {
         String firstName, lastName, setPass;
         System.out.println("Enter your Set Up First Name : ");

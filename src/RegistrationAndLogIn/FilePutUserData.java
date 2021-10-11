@@ -36,7 +36,7 @@ public class FilePutUserData extends UserInformation{
 
             System.out.println("Set your Password : ");
             setPassword = input.nextLine();
-            //data show directly from control input 
+            //data show directly from control input
             showInfo( firstName,lastName,phoneNumber , email , setPassword);
             // Set from file
             fileInputUserData(firstName,lastName,phoneNumber , email , setPassword);
