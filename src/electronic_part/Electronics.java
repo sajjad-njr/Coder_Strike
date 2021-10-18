@@ -18,11 +18,11 @@ public class Electronics {
     
     //Static Method
    public static void showList(){
-       System.out.println("\n   *** Electronics ***\n\n\t1. COMPUTER\n\t2. MOBILE\n\t3. OTHERS\n");
+       System.out.println("\n   *** Electronics ***\n\n\t1. COMPUTER\n\t2. MOBILE\n\t3. OTHERS\n\t4. Exit");
     }
    
    public static void showList2(){
-       System.out.println("\n\t1. Laptop\n\t2. Desktop\n\t3. Accessories\n");
+       System.out.println("\n\t1. Laptop\n\t2. Desktop\n\t3. Accessories\n\t4. Back\n");
     }
     
 //   public void showList(){
