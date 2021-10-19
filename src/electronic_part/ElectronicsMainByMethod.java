@@ -15,46 +15,45 @@ public class ElectronicsMainByMethod {
     /* *************************************
      Computer Main
      ************************************** */
-    public void computureMain() {
+    public void computerMain() {
         // this is for computer main part
 
         Electronics.showList2(); // this method shows 1. computer sub part like i. laptop, ii. desktop, iii. accessories
-        //this must be add  Electronics.showList(); here
-        System.out.print("\t4.Back\n");
-        System.out.print("Choose another Option: ");
+        
+        System.out.print("\tChoose another Option: ");
         int option3 = input.nextInt();
 
         if (option3 == 1) {
-
             laptopInformation();
-            BackLaptoTocomputureMain();
-        } else if (option3 == 2) {
-
+            BackLaptoTocomputerMain();
+        } 
+        else if (option3 == 2) {
             desktopInformation();
             BackDesktopTocomputureMain();
-        } else if (option3 == 3) {
+        } 
+        else if (option3 == 3) {
             accessoriesInformation();
-            BackAccessoriesTocomputureMain();
-        } else if (option3 == 4) {
+            BackAccessoriesTocomputerMain();
+        } 
+        else if (option3 == 4) {
             ElectronicsAllMedtod();
-        } else {
-            computureMain();
+        } 
+        else {
+            computerMain();
         }
     }
 
-    public void BackLaptoTocomputureMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+    public void BackLaptoTocomputerMain() {
+        System.out.println("\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
-            computureMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
-            BackLaptoTocomputureMain();
+            computerMain(); //
+        }
+        else {
+            BackLaptoTocomputerMain();
         }
     }
 
@@ -79,22 +78,18 @@ public class ElectronicsMainByMethod {
             System.out.println("\tPrice: " + laptopinfo[i].price + "TK");
             System.out.println("\tRam: " + laptopinfo[i].ram + "GB");
             System.out.println("");
-
         }
     }
 
     public void BackDesktopTocomputureMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\tPress '1' For back.");      
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
-            computureMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+            computerMain(); //
+        } else {
             BackDesktopTocomputureMain();
         }
     }
@@ -132,19 +127,16 @@ public class ElectronicsMainByMethod {
         accessories.displayAccessories();
     }
 
-    public void BackAccessoriesTocomputureMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+    public void BackAccessoriesTocomputerMain() {
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
-            computureMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
-            BackAccessoriesTocomputureMain();
+            computerMain(); 
+        } else {
+            BackAccessoriesTocomputerMain();
         }
     }
 
@@ -156,16 +148,14 @@ public class ElectronicsMainByMethod {
 
         MobileName mobileName = new MobileNameInfo();
         mobileName.mobileName(); //Mobile name such as samsung, xiaomi, i-phone, Google
-        //add this option mobileName.mobileName();
-        System.out.print("\t5.Back\n");
-
-        System.out.print("Choose another option: ");
+       
+        System.out.print("\tChoose another option: ");
         int choice = input.nextInt();
 
         if (choice == 1) {
 
-            sumsungformation();
-            BackSumsungtoTomobileMain();
+            samsungInformation();
+            BackSamsungtoTomobileMain();
         } else if (choice == 2) {
 
             xiaomiInformation();
@@ -183,7 +173,7 @@ public class ElectronicsMainByMethod {
         }
     }
 
-    public void sumsungformation() {
+    public void samsungInformation() {
         MobileName samsung = new MobileNameInfo();
         samsung.samSung();
 
@@ -200,19 +190,16 @@ public class ElectronicsMainByMethod {
         samsung_ob4.showDisplay();
     }
 
-    public void BackSumsungtoTomobileMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+    public void BackSamsungtoTomobileMain() {
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             mobileMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
-            BackSumsungtoTomobileMain();
+        } else {
+            BackSamsungtoTomobileMain();
         }
     }
 
@@ -234,17 +221,15 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackXiaomiTomobileMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+       
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             mobileMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        } else {
             BackXiaomiTomobileMain();
         }
     }
@@ -267,17 +252,16 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackIPhoneTomobileMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             mobileMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        }
+        else {
             BackIPhoneTomobileMain();
         }
     }
@@ -300,32 +284,29 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackGoogleTomobileMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             mobileMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        }
+        else {
             BackGoogleTomobileMain();
         }
     }
 
     public void BackToElectronicsAllMedtod() {
-        System.out.println("Press '1' For back ->  ");
-        System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+    
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
-            computureMain(); //
-        } else if (data == 11) {
-            ElectronicsAllMedtod();
+            computerMain(); //
         } else {
             BackToElectronicsAllMedtod();
         }
@@ -340,10 +321,7 @@ public class ElectronicsMainByMethod {
         Other other_ob1 = new OtherInfo();
         other_ob1.othersName();//other parts
 
-        //add this option mobileName.mobileName();
-        System.out.print("\t5.Back\n");
-
-        System.out.print("Choose another option: ");
+        System.out.print("\tChoose another option: ");
         int choice = input.nextInt();
 
         if (choice == 1) {
@@ -359,7 +337,7 @@ public class ElectronicsMainByMethod {
             BackCameratoOtherInfoMain();
         } else if (choice == 4) {
             smartWatchInformation();
-            BackSmsrtWatchOtherInfoMain();
+            BackSmartWatchOtherInfoMain();
         } else if (choice == 5) {
             ElectronicsAllMedtod();
         } else {
@@ -376,17 +354,14 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackTvtoOtherInfoMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             otherInfoMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        } else {
             BackTvtoOtherInfoMain();
         }
     }
@@ -400,17 +375,14 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackActoOtherInfoMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             otherInfoMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        } else {
             BackActoOtherInfoMain();
         }
     }
@@ -424,17 +396,14 @@ public class ElectronicsMainByMethod {
     }
 
     public void BackCameratoOtherInfoMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             otherInfoMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
+        } else {
             BackCameratoOtherInfoMain();
         }
     }
@@ -447,19 +416,16 @@ public class ElectronicsMainByMethod {
         smartWatchInfo_ob.smartWatchInfo();
     }
 
-    public void BackSmsrtWatchOtherInfoMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+    public void BackSmartWatchOtherInfoMain() {
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\tChoice Option : ");
         int data;
         data = input.nextInt();
 
         if (data == 1) {
             otherInfoMain(); //
-        }/*else if (data == 11) {
-         ElectronicsAllMedtod();
-         }*/ else {
-            BackSmsrtWatchOtherInfoMain();
+        } else {
+            BackSmartWatchOtherInfoMain();
         }
     }
 
@@ -468,17 +434,14 @@ public class ElectronicsMainByMethod {
      ************************************** */
     public void ElectronicsAllMedtod() {
 
-        Electronics.showList(); /// This method shows 3 main parts of electronics. 1. computer, 2. mobile. 3. others
-        //this must be add  Electronics.showList(); here
-        System.out.print("\t4.Exit\n");
+        Electronics.showList(); /// This method shows 3 main parts of electronics. 1. computer, 2. mobile. 3. others 4. exit
+  
         System.out.print("\n\tChoose another Option: ");
 
         int option2 = input.nextInt();
 
         if (option2 == 1) {
-            computureMain();
-
-            //BackToElectronicsAllMedtod();
+            computerMain();
         } else if (option2 == 2) {
             mobileMain();
         } else if (option2 == 3) {
@@ -486,7 +449,7 @@ public class ElectronicsMainByMethod {
         }
         else if(option2 == 4)
         {
-            System.out.println("\n\t\tSo Far  This Is End Optoion of The Pogram");
+            /*System.out.println("\n\t\tSo Far  This Is End Optoion of The Pogram");
             
             System.out.println("\n\t\t*************************************");
             
@@ -494,7 +457,7 @@ public class ElectronicsMainByMethod {
             
             System.out.println("\t\t*************************************");
             
-            System.out.println("\n\t\texit.....................................");
+            System.out.println("\n\t\texit.....................................");*/
   
                 
             System.exit(0);
@@ -504,8 +467,6 @@ public class ElectronicsMainByMethod {
         {
             ElectronicsAllMedtod();
         }
-    }
-    
-    
+    }   
     
 }
