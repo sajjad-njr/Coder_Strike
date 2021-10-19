@@ -10,18 +10,18 @@ import java.security.PublicKey;
 import java.util.Scanner;
 
 
-public class LogIn {
+public class LogIn extends FilePutUserData {
 
     Scanner input = new Scanner(System.in);
 
     public boolean takeDataFromFile() {
         String firstName, lastName, setPass;
-        System.out.println("Enter your Set Up First Name : ");
+        System.out.println("\n\tEnter your Set Up First Name : ");
         firstName = input.nextLine();
 
-        System.out.println("Enter your Set Up  Last Name : ");
+        System.out.println("\n\tEnter your Set Up  Last Name : ");
         lastName = input.nextLine();
-        System.out.println("Enter your Set Up  Pass : ");
+        System.out.println("\n\tEnter your Set Up  Pass : ");
         setPass = input.nextLine();
 
 
@@ -37,7 +37,7 @@ public class LogIn {
             }
         } catch(FileNotFoundException e)
         {
-            System.out.println("Data Missing From File ");
+            System.out.println("\n\tData Missing From File ");
         }
 //
 //        for(int i = 0 ;i < dataCollect.length; i++)
@@ -46,7 +46,7 @@ public class LogIn {
 //        }
         if(firstName.equals(dataCollect[0]) && setPass.equals( dataCollect[4] ))
         {
-            System.out.println("Log in Successful");
+            System.out.println("\n\tLog in Successful");
             return true;
         }
         else return false;
@@ -68,17 +68,18 @@ public class LogIn {
 
             if(firstName.equals(arrName[0]) && setPassword.equals( arrName[4] ))
             {
-                System.out.println("Log in Successful");
+                System.out.println("\n\tLog in Successful");
             }
             else
             {
                 //Scanner input = new Scanner(System.in);
-                System.out.println("Password wrong ");
+                System.out.println("\n\tPassword wrong ");
                 int a;
-                System.out.println("Enter '1' to show your data");
+                System.out.println("\n\tEnter '1' to show your data");
                 a = input.nextInt();
                 if(a == 1)
                 {
+
                     File myObj2 = new File(firstName + lastName + ".txt");
                     try (Scanner myReaderData = new Scanner(myObj2)) {
                         while (myReaderData.hasNextLine()) {
@@ -86,15 +87,16 @@ public class LogIn {
 
                             System.out.println(data);
                         }
+
                     } catch(
                             FileNotFoundException e)
                     {
-                        System.out.println("Data Missing From File ");
+                        System.out.println("\n\tData Missing From File ");
                     }
                 }
                 else
                 {
-                    System.out.println("wrong input");
+                    System.out.println("\n\twrong input");
                 }
 
             }

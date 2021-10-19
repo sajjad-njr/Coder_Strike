@@ -8,7 +8,7 @@ public class ElectronicsMainByMethod {
 
     Scanner input = new Scanner(System.in);
 
-    ElectronicsMainByMethod() {
+    public ElectronicsMainByMethod() {
 
     }
 

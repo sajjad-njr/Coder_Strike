@@ -69,7 +69,7 @@ public class UserInformation {
 
     }
 
-    public void showInfo(String firstName,String lastName,String phoneNumber , String email , String setPassword)
+    public void showInfo(String firstName, String lastName, String phoneNumber, String email, String setPassword)
     {
         System.out.println("***************************************************************");
         System.out.println("Your First name : "+firstName);

@@ -9,7 +9,6 @@ public class Main {
         //Scanner input = new Scanner(System.in);
 
 
-
          Submain object = new Submain();
 
          object.subMainPart();

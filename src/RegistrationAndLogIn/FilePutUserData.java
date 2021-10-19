@@ -22,26 +22,26 @@ public class FilePutUserData extends UserInformation{
             // PrintWriter pw = new PrintWriter(new FileWriter("UserBioData.txt"));
 
 
-            System.out.println("Enter your First name : ");
+            System.out.println("\n\tEnter your First name : ");
             firstName = input.nextLine();
 
-            System.out.println("Enter your Last name : ");
+            System.out.println("\n\tEnter your Last name : ");
             lastName = input.nextLine();
 
-            System.out.println("Enter your Phone Number : ");
+            System.out.println("\n\tEnter your Phone Number : ");
             phoneNumber= input.nextLine();
 
-            System.out.println("Enter your email id  : ");
+            System.out.println("\n\tEnter your email id  : ");
             email = input.nextLine();
 
-            System.out.println("Set your Password : ");
+            System.out.println("\n\tSet your Password : ");
             setPassword = input.nextLine();
             //data show directly from control input
             showInfo( firstName,lastName,phoneNumber , email , setPassword);
             // Set from file
             fileInputUserData(firstName,lastName,phoneNumber , email , setPassword);
             //LogIn.dataKeepFromFile(firstName,lastName,setPassword);
-            System.out.print("'1' for show set up data \n'2' for log in ");
+            System.out.print("\n\t'1' for show set up data\n\t'2' for log in ");
             int n;
             n = input.nextInt();
             if(n ==  1)
@@ -52,11 +52,11 @@ public class FilePutUserData extends UserInformation{
                // System.out.println("Welcome again");
                 if(obj33.takeDataFromFile()) //that means true
                 {
-                    System.out.println("Go Forward ");
+                    System.out.println("\n\tGo Forward ");
                 }
             }
             else
-                System.out.println("Wrong Choice ");
+                System.out.println("\n\tWrong Choice ");
             //sucessfully work Alhmadullilah
 
 
@@ -68,19 +68,19 @@ public class FilePutUserData extends UserInformation{
 
     }
     //data show direct from console Input
-    @Override
+
     public void showInfo(String firstName,String lastName,String phoneNumber , String email , String setPassword)
     {
         System.out.println("***************************************************************");
-        System.out.println("Your First name : "+firstName);
+        System.out.println("\n\tYour First name : "+firstName);
 
-        System.out.println("Your Last name : "+lastName);
+        System.out.println("\n\tYour Last name : "+lastName);
 
-        System.out.println("Your Phone Number : "+phoneNumber);
+        System.out.println("\n\tYour Phone Number : "+phoneNumber);
 
-        System.out.println("Your email id  : "+email);
+        System.out.println("\n\tYour email id  : "+email);
 
-        System.out.println("Your Password : "+setPassword);
+        System.out.println("\n\tYour Password : "+setPassword);
 
         System.out.println("***************************************************************");
     }
