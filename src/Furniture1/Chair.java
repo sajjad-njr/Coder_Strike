@@ -5,9 +5,9 @@
  */
 package Furniture1;
 
-public class Chairs extends Furniture{
+public class Chair extends Furniture{
 
-    public Chairs(String name, double price){
+    public Chair(String name, double price){
         super(name, price);
     }
 }

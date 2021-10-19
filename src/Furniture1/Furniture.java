@@ -2,8 +2,8 @@
 package Furniture1;
  
 public class Furniture {
-    String name;
-    double price;
+    public String name;
+    public double price;
 
     public Furniture(String name, double price){
         this.name = name;
