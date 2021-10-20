@@ -1,11 +1,9 @@
-package Clothes_part;
+package clothes_part;
 import java.util.Scanner;
-
 public class Main {
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        // write your code here
         System.out.println("Menu");
         System.out.println("1.Grocery\n2.Clothes\n3.Electronics Devices\n4.Furnitures");
 

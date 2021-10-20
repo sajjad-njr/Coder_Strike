@@ -1,4 +1,4 @@
-package Clothes_part;
+package clothes_part;
 
 public class Clothes {
     String name;

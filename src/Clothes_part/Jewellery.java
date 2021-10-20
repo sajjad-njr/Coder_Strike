@@ -1,4 +1,4 @@
-package Clothes_part;
+package clothes_part;
 
 public class Jewellery extends Clothes{
     public Jewellery(String name, double price){
