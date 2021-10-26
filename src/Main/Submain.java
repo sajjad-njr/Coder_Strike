@@ -9,7 +9,7 @@ import electronic_part.*;
 import java.util.Scanner;
 
 //This is the class here all Method activities add
-public class Submain {
+public class Submain extends AllMethodsCombine{
     Scanner input = new Scanner(System.in);
 
     UserInformation obj = new UserInformation();
@@ -19,7 +19,7 @@ public class Submain {
 
     ElectronicsMainByMethod objElectronics = new ElectronicsMainByMethod();
 
-    Submain() {
+   public Submain() {
 
     }
 
@@ -28,17 +28,16 @@ public class Submain {
         obj2.takeInfo();
 
         System.out.println("\n\tNow Log In and go Forward ");
+        logIn();
 
-        if(obj3.takeDataFromFile()) //that means true
-        {
-            System.out.println("\n\tGo Forward ");
-        }
     }
     public void logIn()
     {
         if(obj3.takeDataFromFile()) //that means true
         {
-            System.out.println("\n\tGo Forward ");
+            System.out.print("\n\t---------------");
+            System.out.print("\n\t   Go Forward  ");
+            System.out.print("\n\t---------------");
             catagoriesPart();
 
         }
@@ -60,7 +59,7 @@ public class Submain {
                 lastName1 = input.nextLine();
 
                 ob23.outputDataFromFile(firstName1,lastName1);
-                System.out.println("\n\tNow Enter your correct information ");
+                System.out.println("\n\tNow Enter your correct information \n");
                 logIn();
             }
             else if(var == 2) logIn();
@@ -71,7 +70,7 @@ public class Submain {
 
     public void catagoriesPart()
     {
-        System.out.println("\n\t1.Electronics \n\t2.Grocery\n\tFurniture\n\tClothes\n\tExit");
+        System.out.println("\n\t1. Grocery \n\t2. Cloths\n\t3. Electronics\n\t4. Furniture\n\t5. Exit");
         int var;
         //this loop also like infinity true Loop . so far work good
         for(int ii = 0 ; (var = input.nextInt())>0; ii++)
@@ -79,23 +78,35 @@ public class Submain {
             switch (var)
             {
                 case 1:
-                    System.out.println("\n\tWelcome to electronics Part");
-                    //allAboutElectronics();
-                    objElectronics.ElectronicsAllMedtod();
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\n\t         Grocery Part       ");
+                    System.out.println("\n\t----------------------------");
+                    GroMain();
+
                     break;
                 case 2:
-                    System.out.println("\n\tWelcome to Grocery Part");
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\n\t         Cloths Part"         );
+                    System.out.println("\n\t----------------------------");
+                    clotheAllMethod();
                     break;
                 case 3:
-                    System.out.println("\n\tWelcome to Furniture Part");
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\n\t       Electronics Part       ");
+                    System.out.println("\n\t----------------------------");
+                    electronicsAllMedtod();
                     break;
                 case 4:
-                    System.out.println("\n\tWelcome to Cloths Part");
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\n\t         Furniture Part"      );
+                    System.out.println("\n\t----------------------------");
+                    furintureMain();
+
                     break;
                 case 5:
                     System.exit(0);
                 default:
-                    System.out.println("\n\tBreak");
+                    System.out.println("\n\t wrong choice ");
             }
 
         }
@@ -112,21 +123,29 @@ public class Submain {
 
         if(var1 == 1)
         {
-            System.out.println("\n\tWelcome to electronics Part");
+            System.out.println("\n\t----------------------------");
+            System.out.println("\n\t         Grocery Part       ");
+            System.out.println("\n\t----------------------------");
             //allAboutElectronics();
             objElectronics.ElectronicsAllMedtod();
         }
         else if(var1 == 2)
         {
-            System.out.println("\n\t\t\t\tWelcome to Grocery Part");
+            System.out.println("\n\t----------------------------");
+            System.out.println("\n\t         Cloths Part"         );
+            System.out.println("\n\t----------------------------");
         }
         else if(var1 == 3)
         {
-            System.out.println("\n\t\t\t\tWelcome to Furniture Part");
+            System.out.println("\n\t----------------------------");
+            System.out.println("\n\t       Electronics Part       ");
+            System.out.println("\n\t----------------------------");
         }
         else if(var1 == 4)
         {
-            System.out.println("\n\t\t\t\tWelcome to Cloths Part");
+            System.out.println("\n\t----------------------------");
+            System.out.println("\n\t         Furniture Part"      );
+            System.out.println("\n\t----------------------------");
         }
         else if(var1 == 5)
         {

@@ -1,4 +1,4 @@
-package clothes_part;
+package Clothes_part;
 import java.util.Scanner;
 
 public class ClothesMainMethod {
@@ -95,7 +95,7 @@ public class ClothesMainMethod {
     public void jewelleryMain()
     {
         System.out.println("Jewellery Collection.");
-        Jewellery earrings = new Jewellery("Earrings", 150);
+         Jewellery earrings = new Jewellery("Earrings", 150);
         Jewellery nosepin = new Jewellery("Nose Pin", 500);
         Jewellery necklaces = new Jewellery("Necklaces", 1000);
         Jewellery curi = new Jewellery("Curi", 40);

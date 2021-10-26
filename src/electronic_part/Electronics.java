@@ -18,7 +18,7 @@ public class Electronics {
 
     //Static Method
    public static void showList(){
-       System.out.println("\n   *** Electronics ***\n\n\t1. COMPUTER\n\t2. MOBILE\n\t3. OTHERS\n\t4. Exit");
+       System.out.println("\n   *** Electronics ***\n\n\t1. COMPUTER\n\t2. MOBILE\n\t3. OTHERS\n\t4. Back");
     }
 
    public static void showList2(){

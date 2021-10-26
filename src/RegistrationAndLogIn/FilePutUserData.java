@@ -1,4 +1,5 @@
 package RegistrationAndLogIn;
+import Main.*;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -17,31 +18,33 @@ public class FilePutUserData extends UserInformation{
     {
         ReadDataFroFromFile ob3 = new ReadDataFroFromFile();
         LogIn obj33 = new LogIn();
+        Submain obj44 = new Submain();
 
         try{
             // PrintWriter pw = new PrintWriter(new FileWriter("UserBioData.txt"));
 
 
-            System.out.println("\n\tEnter your First name : ");
+            System.out.print("\n\tEnter your First name : ");
             firstName = input.nextLine();
 
-            System.out.println("\n\tEnter your Last name : ");
+            System.out.print("\n\tEnter your Last name : ");
             lastName = input.nextLine();
 
-            System.out.println("\n\tEnter your Phone Number : ");
+            System.out.print("\n\tEnter your Phone Number : ");
             phoneNumber= input.nextLine();
 
-            System.out.println("\n\tEnter your email id  : ");
+            System.out.print("\n\tEnter your email id  : ");
             email = input.nextLine();
 
-            System.out.println("\n\tSet your Password : ");
+            System.out.print("\n\tSet your Password : ");
             setPassword = input.nextLine();
             //data show directly from control input
             showInfo( firstName,lastName,phoneNumber , email , setPassword);
             // Set from file
             fileInputUserData(firstName,lastName,phoneNumber , email , setPassword);
             //LogIn.dataKeepFromFile(firstName,lastName,setPassword);
-            System.out.print("\n\t'1' for show set up data\n\t'2' for log in ");
+            System.out.println("\n\t'1' for show set up data\n\t'2' for log in ");
+            System.out.print("\n\tChoice an Option : ");
             int n;
             n = input.nextInt();
             if(n ==  1)
@@ -53,6 +56,8 @@ public class FilePutUserData extends UserInformation{
                 if(obj33.takeDataFromFile()) //that means true
                 {
                     System.out.println("\n\tGo Forward ");
+                    obj44.catagoriesPart();
+
                 }
             }
             else

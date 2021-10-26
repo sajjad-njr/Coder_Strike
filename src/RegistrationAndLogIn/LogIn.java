@@ -16,12 +16,12 @@ public class LogIn extends FilePutUserData {
 
     public boolean takeDataFromFile() {
         String firstName, lastName, setPass;
-        System.out.println("\n\tEnter your Set Up First Name : ");
+        System.out.print("\n\t Enter your Set Up First Name : ");
         firstName = input.nextLine();
 
-        System.out.println("\n\tEnter your Set Up  Last Name : ");
+        System.out.print("\n\t Enter your Set Up  Last Name : ");
         lastName = input.nextLine();
-        System.out.println("\n\tEnter your Set Up  Pass : ");
+        System.out.print("\n\t Enter your Set Up  Pass : ");
         setPass = input.nextLine();
 
 
@@ -46,7 +46,9 @@ public class LogIn extends FilePutUserData {
 //        }
         if(firstName.equals(dataCollect[0]) && setPass.equals( dataCollect[4] ))
         {
-            System.out.println("\n\tLog in Successful");
+            System.out.println("*****************************");
+            System.out.println("\t  Log in Successful         ");
+            System.out.println("-----------------------------");
             return true;
         }
         else return false;
@@ -73,9 +75,10 @@ public class LogIn extends FilePutUserData {
             else
             {
                 //Scanner input = new Scanner(System.in);
-                System.out.println("\n\tPassword wrong ");
+                System.out.println("\n\t Password wrong ");
                 int a;
-                System.out.println("\n\tEnter '1' to show your data");
+                System.out.println("\n\t Enter '1' to show your data ");
+                System.out.print("\n\t Choice an Option : ");
                 a = input.nextInt();
                 if(a == 1)
                 {
@@ -91,12 +94,12 @@ public class LogIn extends FilePutUserData {
                     } catch(
                             FileNotFoundException e)
                     {
-                        System.out.println("\n\tData Missing From File ");
+                        System.out.println("\n\t Data Missing From File ");
                     }
                 }
                 else
                 {
-                    System.out.println("\n\twrong input");
+                    System.out.println("\n\t wrong input");
                 }
 
             }

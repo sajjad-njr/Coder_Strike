@@ -1,8 +1,8 @@
-package clothes_part;
+package Clothes_part;
 
 public class Clothes {
-    String name;
-    double price;
+    public String name;
+    public double price;
 
     //Constructor
     public Clothes(String name, double price){
@@ -12,7 +12,7 @@ public class Clothes {
 
     //Static Method
     public static void showList(){
-        System.out.println("\n   *** Clothes ***\n\n\t1. Male\n\t2. Female\n\t3. Jewelry\n");
+        System.out.println("\n\t1. Male\n\t2. Female\n\t3. Jewelry\n\t4. Back");
     }
 
    /* public void showDisplay(){
