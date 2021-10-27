@@ -2,22 +2,23 @@ package Main;
 import RegistrationAndLogIn.FilePutUserData;
 import RegistrationAndLogIn.LogIn;
 import RegistrationAndLogIn.ReadDataFroFromFile;
-import RegistrationAndLogIn.UserInformation;
-import electronic_part.*;
-
-
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 import java.util.Scanner;
 
 //This is the class here all Method activities add
+
 public class Submain extends AllMethodsCombine{
     Scanner input = new Scanner(System.in);
 
-    UserInformation obj = new UserInformation();
+    //UserInformation obj = new UserInformation();
     FilePutUserData obj2 = new FilePutUserData();
     LogIn obj3 = new LogIn();
     ReadDataFroFromFile ob23 = new ReadDataFroFromFile();
 
-    ElectronicsMainByMethod objElectronics = new ElectronicsMainByMethod();
+   // ElectronicsMainByMethod objElectronics = new ElectronicsMainByMethod();
+
 
    public Submain() {
 
@@ -36,8 +37,8 @@ public class Submain extends AllMethodsCombine{
         if(obj3.takeDataFromFile()) //that means true
         {
             System.out.print("\n\t---------------");
-            System.out.print("\n\t   Go Forward  ");
-            System.out.print("\n\t---------------");
+            System.out.print("\t   Go Forward  ");
+            System.out.print("\t---------------");
             catagoriesPart();
 
         }
@@ -68,10 +69,14 @@ public class Submain extends AllMethodsCombine{
         }
     }
 
+    //so called all functions technacally call here after log in
     public void catagoriesPart()
     {
-        System.out.println("\n\t1. Grocery \n\t2. Cloths\n\t3. Electronics\n\t4. Furniture\n\t5. Exit");
+        System.out.println("\n\t1. Grocery \n\t2. Cloths\n\t3. Electronics\n\t4. Furniture\n\t5. Payment \n\t6. Exit\n");
+
+        System.out.println("\t---------------------------------\n");
         int var;
+        System.out.print("\tChoice an option : ");
         //this loop also like infinity true Loop . so far work good
         for(int ii = 0 ; (var = input.nextInt())>0; ii++)
         {
@@ -79,32 +84,45 @@ public class Submain extends AllMethodsCombine{
             {
                 case 1:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\n\t         Grocery Part       ");
-                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t         Grocery Part       ");
+                    System.out.println("\t----------------------------");
+                    //System.out.println(" Item Count : " + itemCount);
                     GroMain();
 
                     break;
                 case 2:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\n\t         Cloths Part"         );
-                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t         Cloths Part"         );
+                    System.out.println("\t----------------------------");
+                    //System.out.println(" Item Count : " + itemCount);
                     clotheAllMethod();
                     break;
                 case 3:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\n\t       Electronics Part       ");
-                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t       Electronics Part       ");
+                    System.out.println("\t----------------------------");
+                   // System.out.println(" Item Count : " + itemCount);
                     electronicsAllMedtod();
                     break;
                 case 4:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\n\t         Furniture Part"      );
-                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t         Furniture Part"      );
+                    System.out.println("\t----------------------------");
                     furintureMain();
 
                     break;
                 case 5:
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t        P A Y M E N T       ");
+                    System.out.println("\t----------------------------");
+
+                    paymentMake();
+                case 6:
+                    System.out.println("\n\t----------------------------");
+                    System.out.println("\t       T H A N K   Y O U      ");
+                    System.out.println("\t----------------------------  ");
                     System.exit(0);
+
                 default:
                     System.out.println("\n\t wrong choice ");
             }
@@ -113,52 +131,7 @@ public class Submain extends AllMethodsCombine{
 
     }
 
-    public void allSubMainParts()
-    {
 
-        System.out.println("\n\t1.Electronics\n\t2.Grocery\n\t3.Furniture\n\t4.Clothes\n\t5.Exit");
-        System.out.println("\n\tChoice Option : ");
-
-        int var1 = input.nextInt();
-
-        if(var1 == 1)
-        {
-            System.out.println("\n\t----------------------------");
-            System.out.println("\n\t         Grocery Part       ");
-            System.out.println("\n\t----------------------------");
-            //allAboutElectronics();
-            objElectronics.ElectronicsAllMedtod();
-        }
-        else if(var1 == 2)
-        {
-            System.out.println("\n\t----------------------------");
-            System.out.println("\n\t         Cloths Part"         );
-            System.out.println("\n\t----------------------------");
-        }
-        else if(var1 == 3)
-        {
-            System.out.println("\n\t----------------------------");
-            System.out.println("\n\t       Electronics Part       ");
-            System.out.println("\n\t----------------------------");
-        }
-        else if(var1 == 4)
-        {
-            System.out.println("\n\t----------------------------");
-            System.out.println("\n\t         Furniture Part"      );
-            System.out.println("\n\t----------------------------");
-        }
-        else if(var1 == 5)
-        {
-            System.exit(0);
-        }
-        else
-        {
-            System.out.println("Wrong Choice ");
-            allSubMainParts();
-        }
-
-
-    }
     public void backPreviousFromElectronics()
     {
         System.out.println("\n\t'1' for back previous part");
@@ -171,23 +144,18 @@ public class Submain extends AllMethodsCombine{
              backPreviousFromElectronics();
         }
     }
-    public void  allAboutElectronics()
-    {
-        //System.out.println("q\ng\ngd\ngf\ngfd\nfng\ngfd\nfdn\ngdg\ngf");
-
-        backPreviousFromElectronics();
-
-    }
-
 
     //that actual call form main
     public void subMainPart()
     {
 
         System.out.println("\n\t*****************************");
+        System.out.println("\t-------------------------------");
         System.out.println("\t---Welcome to E A S Y SHOP\n");
         System.out.println("\t---1. Registration \n");
         System.out.println("\t---2. Log In\n");
+        System.out.println("\t---3. About Work\n");
+        System.out.println("\t---4. Exit \n");
         System.out.print("\t---Choice Option : ");
 
         int data;
@@ -202,7 +170,25 @@ public class Submain extends AllMethodsCombine{
         {
             logIn();
 
-        }else
+        }
+        else if(data == 3)
+        {
+            aboutWork();
+            System.out.println("\tEnter '1' for Back : ");
+            int c = input.nextInt();
+            if(c == 1)
+            {
+                subMainPart();
+            }
+        }
+        else if(data == 4)
+        {
+            System.out.println("\n\t----------------------------");
+            System.out.println("\t       T H A N K   Y O U      ");
+            System.out.println("\t----------------------------  ");
+            System.exit(0);
+        }
+        else
         {
             System.out.println("\n\tWrong Choice ");
             subMainPart();
@@ -210,5 +196,176 @@ public class Submain extends AllMethodsCombine{
 
     }
 
+    void aboutWork()
+    {
+        Scanner input = new Scanner(System.in);
+        try {
+
+            File myObj = new File("aboutUs.txt");
+
+            try (Scanner myReader = new Scanner(myObj)) {
+                while (myReader.hasNextLine()) {
+                    String data = myReader.nextLine();
+                    //ar[i++] = data;
+                    System.out.println(data);
+                } }
+
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+        }
+
+    }
+    void paymentMake()
+    {
+        if(itemCount == 0)
+        {
+            System.out.println("\n\tYou did not buy anything yet .!!");
+
+            System.out.println("\n\tIf we want to buy daily goods press '1'");
+            System.out.println("\tShow Pre Order  ITEM press '2'\n");
+            System.out.print("\tChoice an Option :  ");
+
+
+            int var1 = input.nextInt();
+
+            if(var1 == 1)
+            {
+                catagoriesPart();
+            }
+            else if(var1 == 2)
+            {
+                preOrder();
+                backCatagories();
+            }
+
+        }
+        else
+        {
+            takenItemPrint();
+            clearPayment();
+            backCatagories();
+        }
+
+    }
+
+    void backCatagories()
+    {
+        System.out.println("'1' For back : ");
+        System.out.print("\tChoice an option : ");
+        int a = input.nextInt();
+        if(a==1)
+        {
+            catagoriesPart();
+        }
+        else
+        {
+            backCatagories();
+        }
+    }
+    public void clearPayment()
+    {
+
+        System.out.println("\t---------------------------------\n");
+        System.out.println("\n\t1. Self Delivery\t2. Home Delivery");
+        System.out.print("\tFor Payment Choice Option = ");
+
+        int del = input.nextInt();
+
+        //SELF DELIVERY
+        if(del == 1)
+        {
+            paymentCardOrMobile();
+            backClearPayment();
+        }
+        else if(del == 2)
+        {
+            System.out.print("\n\tEnter your House Distance : ");
+            int dis = input.nextInt();
+
+            totalCost += (dis * 100);
+
+            System.out.println("\tTotal Cost "+totalCost);
+            paymentCardOrMobile();
+            backClearPayment();
+        }
+
+
+        else
+        {
+            System.out.println("\n\tWrong Choice ");
+            clearPayment();
+        }
+
+    }
+    void backClearPayment()
+    {
+
+        System.out.println("\n");
+        System.out.print("\t'0' for Back\n");
+        System.out.print("\tChoice Option = ");
+        int card = input.nextInt();
+        if(card == 0)
+        {
+
+            catagoriesPart();
+        }
+        else
+        {
+            backClearPayment();
+        }
+    }
+
+    void paymentCardOrMobile()
+    {
+        System.out.println("\n\t1. card \t2. Mobile Banking\n");
+//       System.out.println("\t*********************************\n");
+        System.out.println("\t---------------------------------\n");
+        System.out.print("\tFor Payment Choice Option = ");
+        int card = input.nextInt();
+
+        if(card == 1)
+        {
+            System.out.println();
+
+            System.out.print("\n\tEnter Your Card Number : ");
+            int visa = input.nextInt();
+            System.out.println("\tThank you for your Payment ");
+        }
+        else if(card == 2)
+        {
+            System.out.println();
+
+            System.out.print("\n\t1. B - K A S \n\t2. N A G A D \n\t3. R O C K E T\n");
+            System.out.println("\t------------------------------------------------------\n");
+            System.out.print("\tFor Payment Choice Option : ");
+
+            int visa = input.nextInt();
+            if(visa == 1)
+            {
+                System.out.print("\tEnter your B-kas Number = ");
+                int bkas = input.nextInt();
+                System.out.print("\tEnter your  PIN  Number = ");
+                int bkasPin = input.nextInt();
+                System.out.println("\nThank you for your Payment ");
+            }
+            else if(visa == 2)
+            {
+                System.out.print("\tEnter your  Nagad Number =  ");
+                int bkas = input.nextInt();
+                System.out.print("\tEnter your  PIN  Number : ");
+                int bkasPin = input.nextInt();
+                System.out.print("\tThank you for your Payment  ");
+            }
+            else if(visa == 3)
+            {
+                System.out.print("\tEnter your  Rocket Number ");
+                int bkas = input.nextInt();
+                System.out.print("\tEnter your  PIN  Number ");
+                int bkasPin = input.nextInt();
+                System.out.print("\nThank you for your Payment ");
+            }
+
+        }
+    }
 
 }

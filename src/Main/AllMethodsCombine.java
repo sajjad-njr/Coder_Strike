@@ -1,7 +1,5 @@
 package Main;
-
 import electronic_part.*;
-
 import Clothes_part.*;
 import Furniture1.*;
 import java.util.Scanner;
@@ -9,100 +7,436 @@ import java.util.Scanner;
 public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods , GroceriesMethods , FurnitureMethods{
 
     Scanner input = new Scanner(System.in);
-    int[] arr = new int[100];
-    int[] collect = new int[100];
-    int[] quantity = new int[100];
-    int[] price2 = new int[100];
-    int totalPrice = 0, add = 0, len = 0;
-    int ci = 0, qi = 0, pri = 0;
+    public static int[] arr = new int[120];
+    public static  int[] collect = new int[120];
+    public static  int[] quantity = new int[120];
+    public static   int[] price2 = new int[120];
+    public static  int add = 0, len = 0;
 
-    int itemCount = 0;
+    public static  int ci = 0, qi = 0, pri = 0;
 
-
-
-
-
-
+    public static int itemCount = 0 , item = 0 , totalPrice = 0,totalCost=0;
 
 
     public void GroMain(){
         System.out.println("\n\t1. Rice\t\t\t\t\t\t2. Dal\n\n\t3. Salt\t\t\t\t\t\t4. Flour\n\n\t5. Masala\t\t\t\t\t6. Suji\n\n\t7. Egg\t\t\t\t\t\t8. Pea-flour\n\n\t9. Edible Oil\t\t\t\t10. Vinegar\n\n\t11. Tea Bag\t\t\t\t\t12. Tea Poly Bag\n\n\t13. Vermicelli\t\t\t\t14. Peanut\n\n\t15. Biscuit\t\t\t\t\t16. Noodles\n\n\t17. Powder Milk\t\t\t\t18. Soft Drinks\n\n\t\t\t19. Back\n");
-        System.out.print("Choice an Option : ");
+        System.out.print("\tChoice an Option : ");
         int num = input.nextInt();
         switch (num){
             case 1:
 
                 riceList();
 
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                  item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 12) {
+                            itemCode(code);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 2:
-
                 dalList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                 item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 12) {
+                            itemCode(code+12);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 3:
                 saltList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 7) {
+                            itemCode(code+ 24);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 4:
                 flourList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 20) {
+                            itemCode(code + 31);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 5:
                 masalaList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 15) {
+                            itemCode(code+51);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 6:
                 sujiList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 8) {
+                            itemCode(code+ 66);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 7:
                 eggList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 4) {
+                            itemCode(code + 74);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 8:
                 peaFlourList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 3) {
+                            itemCode(code+ 78);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 9:
                 edibleOilList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 13) {
+                            itemCode(code+81);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 10:
                 VinegarList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 8) {
+                            itemCode(code+94);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 11:
-                teaBagList();
+               // teaBagList();
+                teaList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 6) {
+                            itemCode(code+102);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 12:
-                teaList();
+                //teaList();
+                teaBagList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 4) {
+                            itemCode(code+108);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 13:
                 vermicelliList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 8) {
+                            itemCode(code+112);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 14:
                 peanutList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 5) {
+                            itemCode(code+120);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
+
                 BackGroMain();
                 break;
             case 15:
                 biscuitList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 14) {
+                            itemCode(code+125);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 16:
                 noodlesList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 13) {
+                            itemCode(code+139);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 17:
                 powderMilkList();
+
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 9) {
+                            itemCode(code+152);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 18:
                 softDrinksList();
+                System.out.println("\t'0' For Back ");
+                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                item = input.nextInt();
+                //takeItem(item);
+                if (item == 0) {
+                    BackGroMain();
+                } else {
+                    for (int k = 0; k < item; k++) {
+
+                        System.out.println("\tEnter Code Numnber : ");
+                        int code = input.nextInt();
+                        if (code >= 1 && code <= 7) {
+                            itemCode(code+161);
+                        } else {
+                            System.out.println("\tOut of Range");
+                        }
+                    }
+                }
                 BackGroMain();
                 break;
             case 19:
@@ -245,20 +579,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t                         E D I B L E                      ");
         System.out.println("\n\t------------------------------------------------------\n");
-        System.out.println("\n\t1.  Saffola Active Plus Edible Oil\n\tPer litre: 254  BDT");
-        System.out.print("\n\t2.  King's Sunflower Oil\n\tPer litre: 270  BDT\n");
-        System.out.print("\n\t3.  Rupchanda Soyabean Oil\n\tPer litre: 152  BDT\n");
-        System.out.print("\n\t4.  Pusti Soyabean Oil\n\tPer litre: 150  BDT\n");
-        System.out.print("\n\t5.  Olitalia Sunflower Oil\n\tPer litre: 325  BDT\n");
-        System.out.print("\n\t6.  Pran Mustard Oil\n\tPer litre: 270  BDT\n");
-        System.out.print("\n\t7.  Dhakaiya Black Seed Oil\n\tPer litre: 1850 BDT\n");
-        System.out.print("\n\t8.  Shera Bangla Pure Mustard Oil\n\tPer litre: 225  BDT\n");
-        System.out.print("\n\t9. Fresh Mustard Oil\n\tPer litre: 270  BDT\n");
-        System.out.print("\n\t10. Sajeeb Mustard Oil\n\tPer litre: 270  BDT\n");
-        System.out.print("\n\t11. Shaad Mustard Oil\n\tPer litre: 260  BDT\n");
-        System.out.print("\n\t12. Fortune Rice Bran Oil\n\tPer litre: 195  BDT\n");
-        System.out.print("\n\t13. Teer Soyabean Oil\n\tPer litre: 145  BDT\n");
-        System.out.print("\n\t14. Radhuni Pure Mustard Oil\n\tPer litre: 270  BDT\n");
+
+        System.out.print("\n\t1.  King's Sunflower Oil\n\tPer litre: 270  BDT");
+        System.out.print("\n\t2.  Rupchanda Soyabean Oil\n\tPer litre: 152  BDT\n");
+        System.out.print("\n\t3.  Pusti Soyabean Oil\n\tPer litre: 150  BDT\n");
+        System.out.print("\n\t4.  Olitalia Sunflower Oil\n\tPer litre: 325  BDT\n");
+        System.out.print("\n\t5.  Pran Mustard Oil\n\tPer litre: 270  BDT\n");
+        System.out.print("\n\t6.  Dhakaiya Black Seed Oil\n\tPer litre: 1850 BDT\n");
+        System.out.print("\n\t7.  Shera Bangla Pure Mustard Oil\n\tPer litre: 225  BDT\n");
+        System.out.print("\n\t8. Fresh Mustard Oil\n\tPer litre: 270  BDT\n");
+        System.out.print("\n\t9. Sajeeb Mustard Oil\n\tPer litre: 270  BDT\n");
+        System.out.print("\n\t10. Shaad Mustard Oil\n\tPer litre: 260  BDT\n");
+        System.out.print("\n\t11. Fortune Rice Bran Oil\n\tPer litre: 195  BDT\n");
+        System.out.print("\n\t12. Teer Soyabean Oil\n\tPer litre: 145  BDT\n");
+        System.out.print("\n\t13. Radhuni Pure Mustard Oil\n\tPer litre: 270  BDT\n");
     }
     public void VinegarList() {
         System.out.println("\n\t------------------------------------------------------");
@@ -333,8 +667,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t11. Ifad Choco Delight Biscuit\n\tPer 500 gm: 100 BDT\n");
         System.out.print("\n\t12. Cocola Lexus Vegetable Biscuit\n\tPer 500 gm: 115 BDT\n");
         System.out.print("\n\t13. Olympic Milk Plus Biscuit\n\tPer 500 gm: 75  BDT\n");
-        System.out.print("\n\t14. Olympic Tip Biscuit\n\tPer 500 gm: 100 BDT\n");
-        System.out.print("\n\t15. Cadbury Oreo Original Cream Biscuit\n\tPer 500 gm: 230 BDT\n");
+        System.out.print("\n\t14. Cadbury Oreo Original Cream Biscuit\n\tPer 500 gm: 230 BDT\n");
     }
     public void noodlesList() {
         System.out.println("\n\t------------------------------------------------------");
@@ -382,7 +715,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void BackGroMain(){
-        System.out.print("Press '1' for Back : ");
+        System.out.print("\tPress '1' for Back : ");
         int n;
         n = input.nextInt();
         if (n == 1) {
@@ -393,37 +726,6 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             BackGroMain();
         }
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     /* *************************************
  Computer Main
@@ -439,49 +741,45 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         if (option3 == 1) {
             laptopInformation();
-            System.out.println("'0' For Back ");
-            System.out.print("Enter Number of Item That you want to Buy : ");
-            int item = input.nextInt();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                //BackLaptoTocomputerMain();
-                //backToComputerMainMethod();
-                computerMain();
-                return;
+                backToComputerMainMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("Enter Code Numnber : ");
+                    System.out.println("\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
-                        itemCode(code);
+                        itemCode(code+193);
                     } else {
-                        System.out.println("Out of Range");
+                        System.out.println("\tOut of Range");
                     }
                 }
             }
-
            // BackLaptoTocomputerMain();
             backToComputerMainMethod();
         } else if (option3 == 2) {
             desktopInformation();
 
-            System.out.print("Enter Number of Item That you want to Buy : ");
-            int item = input.nextInt();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                //BackDesktopTocomputureMain();
-                //backToComputerMainMethod();
-                computerMain();
+                backToComputerMainMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("Enter Code Numnber : ");
+                    System.out.println("\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
-                        itemCode(code+4);
+                        itemCode(code+197);
                     } else {
-                        System.out.println("Out of Range");
+                        System.out.println("\tOut of Range");
                     }
                 }
             }
@@ -491,22 +789,21 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (option3 == 3) {
             accessoriesInformation();
 
-            System.out.print("Enter Number of Item That you want to Buy : ");
-            int item = input.nextInt();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-               // BackDesktopTocomputureMain();
-                //backToComputerMainMethod();
-                computerMain();
+                backToComputerMainMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("Enter Code Numnber : ");
+                    System.out.println("\tEnter Code Numnber : ");
                     int code = input.nextInt();
-                    if (code >= 1 && code <= 4) {
-                        itemCode(code+8);
+                    if (code >= 1 && code <= 6) {
+                        itemCode(code+ 201);
                     } else {
-                        System.out.println("Out of Range");
+                        System.out.println("\tOut of Range");
                     }
                 }
             }
@@ -650,20 +947,21 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
             samsungInformation();
 
-            System.out.print("Enter Number of Item That you want to Buy : ");
-            int item = input.nextInt();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackSamsungtoTomobileMain();
+                backToMobileMainMethod();
             } else {
                 for (int k = 0; k < item; k++) {
-                    System.out.println("Mobile O asi mono samsungInformation");
-                    System.out.println("Enter Code Numnber : ");
+
+                    System.out.println("\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
-                        itemCode(code);
+                        itemCode(code+206);
                     } else {
-                        System.out.println("Out of Range");
+                        System.out.println("\tOut of Range");
                     }
                 }
             }
@@ -672,29 +970,66 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (choice == 2) {
 
             xiaomiInformation();
-            System.out.print("Enter Number of Item That you want to Buy : ");
-            int item = input.nextInt();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackXiaomiTomobileMain();
+                backToMobileMainMethod();
             } else {
                 for (int k = 0; k < item; k++) {
-                    System.out.println("Mobile O asi mono koro xiaomiInformation");
-                    System.out.println("Enter Code Numnber : ");
+
+                    System.out.println("\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
-                        itemCode(code);
+                        itemCode(code+210);
                     } else {
-                        System.out.println("Out of Range");
+                        System.out.println("\tOut of Range");
                     }
                 }
             }
             BackXiaomiTomobileMain();
         } else if (choice == 3) {
             iPhoneInformation();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToMobileMainMethod();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+214);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             BackIPhoneTomobileMain();
         } else if (choice == 4) {
             googleInformation();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToMobileMainMethod();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+218);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             BackGoogleTomobileMain();
         } else if (choice == 5) {
             electronicsAllMedtod();
@@ -849,8 +1184,6 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
     }
 
-// Phone use kora baki amar
-
     public void backToMobileMainMethod()
     {
         System.out.println("\tPress '1' For back.");
@@ -881,16 +1214,96 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         if (choice == 1) {
 
             TvInformation();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                BackTvtoOtherInfoMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+266);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackTvtoOtherInfoMain();
         } else if (choice == 2) {
 
             AcInformation();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                BackActoOtherInfoMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+270);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackActoOtherInfoMain();
         } else if (choice == 3) {
             cameraInformation();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                BackCameratoOtherInfoMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+274);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackCameratoOtherInfoMain();
         } else if (choice == 4) {
             smartWatchInformation();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                BackSmartWatchOtherInfoMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+278);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackSmartWatchOtherInfoMain();
         } else if (choice == 5) {
             electronicsAllMedtod();
@@ -991,23 +1404,6 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /* *************************************
      Here I Called All Method of Electronics
      ************************************** */
@@ -1036,18 +1432,6 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
     }
 
-
-
-
-
-
-
-
-
-//************
-    //Cloth Start
-    //*****************
-
     /* ...........
    MALE CLOTHES
    .............. */
@@ -1074,13 +1458,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void BackToMaleClothMain() {
-        System.out.println("Press '1' For back ->  ");
-        //System.out.println("Press '11' main part -> : ");
+        System.out.println("Press '0' For back :  ");
+
         System.out.print("Choice Option : ");
         int data;
         data = input.nextInt();
 
-        if (data == 1) {
+        if (data == 0) {
             clotheAllMethod();
         } else {
 
@@ -1115,13 +1499,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void BackToFemaleClothMain() {
-        System.out.println("Press '1' For back ->  ");
+        System.out.println("Press '0' For back   ");
         //System.out.println("Press '11' main part -> : ");
         System.out.print("Choice Option : ");
         int data;
         data = input.nextInt();
 
-        if (data == 1) {
+        if (data == 0) {
             clotheAllMethod();
         } else {
 
@@ -1151,35 +1535,92 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void BackToJewelleryFemale() {
-        System.out.println("Press '1' For back ->  ");
+        System.out.println("Press '0' For back   ");
         //System.out.println("Press '11' main part -> : ");
         System.out.print("Choice Option : ");
         int data;
         data = input.nextInt();
 
-        if (data == 1) {
+        if (data == 0) {
             clotheAllMethod();
         } else {
             BackToJewelleryFemale();
         }
     }
 
-
     // Added 4th option is All Main
     public void clotheAllMethod() {
         Clothes.showList();
        // System.out.println("\t4.Back Previous ");
-        System.out.print("Choose your subcategory :  ");
+        System.out.print("\tChoose your subcategory :  ");
         int subcategory = input.nextInt();
 
         if (subcategory == 1) {
             maleClothMain();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToMobileMainMethod();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 10) {
+                        itemCode(code+168);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             BackToMaleClothMain();
         } else if (subcategory == 2) {
             femaleClothMain();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToMobileMainMethod();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 9) {
+                        itemCode(code+179);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackToFemaleClothMain();
         } else if (subcategory == 3) {
             jewelleryMain();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToMobileMainMethod();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 6) {
+                        itemCode(code+187);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             BackToJewelleryFemale();
         } else if (subcategory == 4) {
 
@@ -1190,11 +1631,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
     }
 
-
     public void furnitureShow() {
         System.out.println("\n\t1. Bed\t\t\t\t2. Table\n\n\t3. Wardrobe\t\t\t4. Dresser\n\n\t5. Chair\t\t\t6. Sofa\n\n\t7. Cabinetry\t\t8. Ottoman\n\n\t9. Stool\t\t\t10. Chaise Longue\n\n\t\t11. Back \n");
         System.out.println("\t---------------------------");
-        System.out.print("\tChoose your subcategory: ");
+        System.out.print("\tChoose your subcategory : ");
         // int subcategory = input.nextInt();
     }
 
@@ -1206,34 +1646,216 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         if (subcategory == 1) {
             showBedProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 3) {
+                        itemCode(code+222);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
 
         } else if (subcategory == 2) {
             showTableProducts();
+
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+225);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
+
             backToFurnitureMain();
         } else if (subcategory == 3) {
             showWardrobeProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+239);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 4) {
             showDresserProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 2) {
+                        itemCode(code+243);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 5) {
             showChairProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+245);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 6) {
             showCouchProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 3) {
+                        itemCode(code+249);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 7) {
             showCabinetryProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 3) {
+                        itemCode(code+252);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 8) {
             showOttomanProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 3) {
+                        itemCode(code+255);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 9) {
             showStoolProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 3) {
+                        itemCode(code+259);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 10) {
             showChaiseLongueProducts();
+            System.out.println("\t'0' For Back ");
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+            //takeItem(item);
+            if (item == 0) {
+                backToFurnitureMain();
+            } else {
+                for (int k = 0; k < item; k++) {
+
+                    System.out.println("\tEnter Code Numnber : ");
+                    int code = input.nextInt();
+                    if (code >= 1 && code <= 4) {
+                        itemCode(code+262);
+                    } else {
+                        System.out.println("\tOut of Range");
+                    }
+                }
+            }
             backToFurnitureMain();
         } else if (subcategory == 11) {
 
@@ -1245,7 +1867,6 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
 
     }
-
     public  void showBedProducts() {
         System.out.println("\n\tBed: There are dozens of different types of beds.The price will be varies depends on the different quality.\n");
 
@@ -1422,13 +2043,3548 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         }
     }
 
-
     //--------void item
     void itemCode(int n) {
-        int data = 0, basePrice = 0;
+        int  data, basePrice ;
         switch (n) {
+
+            case 1:
+                System.out.println("\tShaad Chinigura Rice");
+                System.out.print("\tQuantity : ");
+                int data1 = input.nextInt();
+                basePrice = 130;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data1;
+                price2[pri++] = 130;
+                itemCount++;
+
+                break;
+            case 2:
+                System.out.println("\tKhusboo Kalijira Rice");
+                System.out.print("\tQuantity : ");
+                int data11 = input.nextInt();
+                basePrice = 135;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data11;
+                price2[pri++] = 135;
+                itemCount++;
+
+                break;
+            case 3:
+                System.out.println("\tChinigura Rice");
+                System.out.print("\tQuantity : ");
+
+                int data111= input.nextInt();
+                basePrice = 99;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data111;
+                price2[pri++] = 99;
+                itemCount++;
+
+                break;
+            case 4:
+                System.out.println("\tRupchanda Chinigura Rice");
+                System.out.print("\tQuantity : ");
+
+                int data12 = input.nextInt();
+                basePrice = 135;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data12;
+                price2[pri++] = 135;
+                itemCount++;
+
+                break;
+            case 5:
+                System.out.println("\tTulshimala Polau Rice");
+                System.out.print("\tQuantity : ");
+
+                int data122 = input.nextInt();
+                basePrice = 125;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data122;
+                price2[pri++] = 125;
+                itemCount++;
+
+                break;
+            case 6:
+                System.out.println("\tChinigura Polau Rice");
+                System.out.print("\tQuantity : ");
+
+                int data13 = input.nextInt();
+                basePrice = 130;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data13;
+                price2[pri++] = 130;
+                itemCount++;
+                break;
+            case 7:
+                System.out.println("\tAtash Chal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 60;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 60;
+                itemCount++;
+                break;
+            case 8:
+                System.out.println("\tKatari Jirashail Rice");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 66;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 66;
+                itemCount++;
+                break;
+            case 9:
+                System.out.println("\tSupreme Basmati Rice");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 250;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 250;
+                itemCount++;
+                break;
+            case 10:
+                System.out.println("\tJirashail Rice");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 80;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 80;
+                itemCount++;
+                break;
+            case 11:
+                System.out.println("\tPremium Miniket Rice");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 65;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 65;
+                itemCount++;
+                break;
+            case 12:
+                System.out.println("\tPran Chinigura Rice");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 125;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 125;
+                itemCount++;
+                break;
+
+//Dal List +12
+            case 13:
+                System.out.println("\tChola Boot Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 70;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 70;
+                itemCount++;
+                break;
+            case 14:
+                System.out.println("\tMoshur Dal (Deshi)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 109;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 109;
+                itemCount++;
+                break;
+            case 15:
+                System.out.println("\tMoshur Dal (Imported)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 89;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 89;
+                itemCount++;
+                break;
+            case 16:
+                System.out.println("\tMug Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 175;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 175;
+                itemCount++;
+                break;
+            case 17:
+                System.out.println("\tBoot Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 80;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 80;
+                itemCount++;
+                break;
+            case 18:
+                System.out.println("\tDubli Boot Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 70;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 70;
+                itemCount++;
+                break;
+            case 19:
+                System.out.println("\tMixed Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 130;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 130;
+                itemCount++;
+                break;
+            case 20:
+                System.out.println("\tAnchor Boot Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 80;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 80;
+                itemCount++;
+                break;
+            case 21:
+                System.out.println("\tGarbanzo Peeled");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 140;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 140;
+                itemCount++;
+                break;
+            case 22:
+                System.out.println("\tMashkolai Dal Peeled");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 200;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 200;
+                itemCount++;
+                break;
+
+            case 23:
+                System.out.println("\tKheshari Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 100;
+                itemCount++;
+                break;
+            case 24:
+                System.out.println("\tMotor Dal");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 180;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 180;
+                itemCount++;
+                break;
+
+//Salt List +24
+            case 25:
+                System.out.println("\tACI Pure Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 35;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 35;
+                itemCount++;
+                break;
+            case 26:
+                System.out.println("\tFresh Super Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 32;
+                itemCount++;
+                break;
+            case 27:
+                System.out.println("\tRongdhanu Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 25;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 25;
+                itemCount++;
+                break;
+            case 28:
+                System.out.println("\tMuskan Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 35;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 35;
+                itemCount++;
+                break;
+            case 29:
+                System.out.println("\tPran Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 38;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 38;
+                itemCount++;
+                break;
+            case 30:
+                System.out.println("\tMolla Super Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 32;
+                itemCount++;
+                break;
+            case 31:
+                System.out.println("\tSena Salt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 32;
+                itemCount++;
+                break;
+
+//Flour List +31
+            case 32:
+                System.out.println("\tTeer Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 42;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 42;
+                itemCount++;
+                break;
+            case 33:
+                System.out.println("\tTeer Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 34:
+                System.out.println("\tBashundhara Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 35:
+                System.out.println("\tIfad Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 40;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 40;
+                itemCount++;
+                break;
+            case 36:
+                System.out.println("\tFresh Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 40;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 40;
+                itemCount++;
+                break;
+            case 37:
+                System.out.println("\tTeer Whole Wheat Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 44;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 44;
+                itemCount++;
+                break;
+            case 38:
+                System.out.println("\tIfad Brown Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 39:
+                System.out.println("\tRice Flour");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 80;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 80;
+                itemCount++;
+                break;
+            case 40:
+                System.out.println("\tBashundhara Brown Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 41:
+                System.out.println("\tFresh Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 42:
+                System.out.println("\tIfad Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 43:
+                System.out.println("\tACI Pure Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 48;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 48;
+                itemCount++;
+                break;
+            case 44:
+                System.out.println("\tACI Pure Brown Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 45:
+                System.out.println("\tShaad Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 42;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 42;
+                itemCount++;
+                break;
+            case 46:
+                System.out.println("\tShaad Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 47:
+                System.out.println("\tPusti Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 40;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 40;
+                itemCount++;
+                break;
+            case 48:
+                System.out.println("\tShaad Brown Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 49:
+                System.out.println("\tPusti Maida");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 49;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 49;
+                itemCount++;
+                break;
+            case 50:
+                System.out.println("\tBPM Red Rice Flour");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 100;
+                itemCount++;
+                break;
+            case 51:
+                System.out.println("\tFresh Whole Wheat Atta");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 44;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 44;
+                itemCount++;
+                break;
+
+//MasalaList +51
+            case 52:
+                System.out.println("\tCumin Seed (Jira)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 390;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 390;
+                itemCount++;
+                break;
+            case 53:
+                System.out.println("\tCinnamon (Daruchini)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 790;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 790;
+                itemCount++;
+                break;
+            case 54:
+                System.out.println("\tCardamom (Elachi)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2980;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2980;
+                itemCount++;
+                break;
+            case 55:
+                System.out.println("\tRadhuni Turmeric Powder (Holud)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 475;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 475;
+                itemCount++;
+                break;
+            case 56:
+                System.out.println("\tRadhuni Chilli (Morich)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 500;
+                itemCount++;
+                break;
+            case 57:
+                System.out.println("\tDried Chillies (Shukna Morich)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 290;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 290;
+                itemCount++;
+                break;
+            case 58:
+                System.out.println("\tBay Leaves (Tejpata)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 190;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 190;
+                itemCount++;
+                break;
+            case 59:
+                System.out.println("\tRadhuni Cumin (Jeera)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 800;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 800;
+                itemCount++;
+                break;
+            case 60:
+                System.out.println("\tCloves (Lobongo)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2580;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2580;
+                itemCount++;
+                break;
+            case 61:
+                System.out.println("\tRadhuni Coriander (Dhoniya)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 345;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 345;
+                itemCount++;
+                break;
+            case 62:
+                System.out.println("\tBlack Cumin (Kalo Jira)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 490;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 490;
+                itemCount++;
+                break;
+
+            case 63:
+                System.out.println("\tRadhuni Garam Masala");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1475;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1475;
+                itemCount++;
+                break;
+
+            case 64:
+                System.out.println("\tFenugreek Seed (Methi)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 190;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 190;
+                itemCount++;
+                break;
+            case 65:
+                System.out.println("\tRadhuni Roast Masala");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1400;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1400;
+                itemCount++;
+                break;
+            case 66:
+                System.out.println("\tMix Spice (Pach Foron)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 290;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 290;
+                itemCount++;
+                break;
+
+//Suji List  +66
+            case 67:
+                System.out.println("\tIfad Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+
+            case 68:
+                System.out.println("Teer Semolina Suji");
+                System.out.print("Quantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+
+            case 69:
+                System.out.println("\tBashundhara Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 66;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 66;
+                itemCount++;
+                break;
+            case 70:
+                System.out.println("\tFresh Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+            case 71:
+                System.out.println("\tACI Pure Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+            case 72:
+                System.out.println("\tMuskaan Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+            case 73:
+                System.out.println("\tShaad Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+            case 74:
+                System.out.println("\tPusti Suji");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 64;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+
+//Egg list +74
+            case 75:
+                System.out.println("\tChicken Eggs (Layer)-4pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 36;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 36;
+                itemCount++;
+                break;
+            case 76:
+                System.out.println("\tQuail Eggs-4pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 17;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 17;
+                itemCount++;
+                break;
+            case 77:
+                System.out.println("\tDuck Eggs (Deshi)-4pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 60;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 64;
+                itemCount++;
+                break;
+            case 78:
+                System.out.println("\tOrganic Chicken Eggs (Deshi)-4pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+
+//pea flour list +78
+            case 79:
+                System.out.println("\tBooter Beshon");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 98;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 98;
+                itemCount++;
+                break;
+            case 80:
+                System.out.println("\tFit Food Beshon");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 516;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 516;
+                itemCount++;
+                break;
+            case 81:
+                System.out.println("\tBPM Mashkalai Bason");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 220;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 220;
+                itemCount++;
+                break;
+
+//Edible Oil list +81
+            case 82:
+                System.out.println("\tKing's Sunflower Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 270;
+                itemCount++;
+                break;
+            case 83:
+                System.out.println("\tRupchanda Soyabean Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 152;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 152;
+                itemCount++;
+                break;
+            case 84:
+                System.out.println("\tPusti Soyabean Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 150;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 150;
+                itemCount++;
+                break;
+            case 85:
+                System.out.println("\tOlitalia Sunflower Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 325;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 325;
+                itemCount++;
+                break;
+            case 86:
+                System.out.println("\tPran Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 270;
+                itemCount++;
+                break;
+            case 87:
+                System.out.println("\tDhakaiya Black Seed Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1850;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1850;
+                itemCount++;
+                break;
+            case 88:
+                System.out.println("\tShera Bangla Pure Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 225;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 225;
+                itemCount++;
+                break;
+            case 89:
+                System.out.println("\tFresh Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 270;
+                itemCount++;
+                break;
+            case 90:
+                System.out.println("\tSajeeb Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 270;
+                itemCount++;
+                break;
+            case 91:
+                System.out.println("\tShaad Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 260;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 260;
+                itemCount++;
+                break;
+            case 92:
+                System.out.println("\tFortune Rice Bran Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 195;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 195;
+                itemCount++;
+                break;
+            case 93:
+                System.out.println("\tTeer Soyabean Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 145;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 145;
+                itemCount++;
+                break;
+            case 94:
+                System.out.println("\tRadhuni Pure Mustard Oil Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 270;
+                itemCount++;
+                break;
+
+//Vinegar list +94
+            case 95:
+                System.out.println("\tBD Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 85;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 85;
+                itemCount++;
+                break;
+            case 96:
+                System.out.println("\tBragg Apple Cider Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 560;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 560;
+                itemCount++;
+                break;
+            case 97:
+                System.out.println("\tCalypso Apple Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 510;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 510;
+                itemCount++;
+                break;
+            case 98:
+                System.out.println("\tHeinz Apple Cider Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 425;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 425;
+                itemCount++;
+                break;
+            case 99:
+                System.out.println("\tSaporito Red Grape Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 660;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 660;
+                itemCount++;
+                break;
+            case 100:
+                System.out.println("\tAhmed White Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 130;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 130;
+                itemCount++;
+                break;
+            case 101:
+                System.out.println("\tHeinz White Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 420;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 420;
+                itemCount++;
+                break;
+            case 102:
+                System.out.println("\tBorges Apple Cider Vinegar Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 555;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 555;
+                itemCount++;
+                break;
+
+//Tea Poly list +102
+            case 103:
+                System.out.println("\tBrooke Bond Taaza Black Tea Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 500;
+                itemCount++;
+                break;
+            case 104:
+                System.out.println("\tIspahani Mirzapore Best Leaf Tea Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 475;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 475;
+                itemCount++;
+                break;
+            case 105:
+                System.out.println("\tNestea Iced Tea Lemon Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 600;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 600;
+                itemCount++;
+                break;
+            case 106:
+                System.out.println("\tFinlay Premium Tea Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 520;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 520;
+                itemCount++;
+                break;
+            case 107:
+                System.out.println("\tMuskan BOP Tea Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 360;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 360;
+                itemCount++;
+                break;
+            case 108:
+                System.out.println("\tIspahani Zareen Premium Tea Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 600;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 600;
+                itemCount++;
+                break;
+
+//Tea Bag list +108
+            case 109:
+                System.out.println("\tIspahani Mirzapore Tea Bag Per 50 pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 85;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 85;
+                itemCount++;
+                break;
+            case 110:
+                System.out.println("\tKazi & Kazi Green Tea Per 50 pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 210;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 210;
+                itemCount++;
+                break;
+            case 111:
+                System.out.println("\tTetley Premium Tea Bags Per 50 pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 75;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 75;
+                itemCount++;
+                break;
+            case 112:
+                System.out.println("\tFinlays Pure Green Tea Per 50 pcs");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 110;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 110;
+                itemCount++;
+                break;
+
+//Vermicelli list +112
+            case 113:
+                System.out.println("\tCock Vermicelli Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 175;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 175;
+                itemCount++;
+                break;
+            case 114:
+                System.out.println("\tDekko Vermicelli Shemai Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 145;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 145;
+                itemCount++;
+                break;
+            case 115:
+                System.out.println("\tACI Pure Vermicelli Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 145;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 145;
+                itemCount++;
+                break;
+            case 116:
+                System.out.println("\tPran Vermicelli Shemai Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 175;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 175;
+                itemCount++;
+                break;
+            case 117:
+                System.out.println("\tBD Vermicelli Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 175;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 175;
+                itemCount++;
+                break;
+            case 118:
+                System.out.println("\tBashundhara Vermicelli Shemai Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 165;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 165;
+                itemCount++;
+                break;
+            case 119:
+                System.out.println("\tBanoful Vermicelli Shemai Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 175;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 175;
+                itemCount++;
+                break;
+            case 120:
+                System.out.println("\tArku Vermicelli Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 160;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 160;
+                itemCount++;
+                break;
+
+//Peanut list +120
+            case 121:
+                System.out.println("\tKaju Badam (Cashew Nut) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1090;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1090;
+                itemCount++;
+                break;
+            case 122:
+                System.out.println("\tAlmonds (Kath Badam) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 990;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 990;
+                itemCount++;
+                break;
+            case 123:
+                System.out.println("\tPeanut Raw (Kacha Cheena Badam) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 290;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 290;
+                itemCount++;
+                break;
+            case 124:
+                System.out.println("\tPeanut Peeled (Vaja Cheena Badam) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 390;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 390;
+                itemCount++;
+                break;
+            case 125:
+                System.out.println("\tPistachios (Pesta Badam) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2190;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2190;
+                itemCount++;
+                break;
+
+//Biscuit list +125
+            case 126:
+                System.out.println("\tOlympic Premium Energy Plus Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 85;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 85;
+                itemCount++;
+                break;
+            case 127:
+                System.out.println("\tBelleame Cremo Vanilla Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 165;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 165;
+                itemCount++;
+                break;
+            case 128:
+                System.out.println("\tHaque Milk Chocolate Digestive Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 120;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 120;
+                itemCount++;
+                break;
+            case 129:
+                System.out.println("\tCocola Champion Chocolate Cream Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 100;
+                itemCount++;
+                break;
+            case 130:
+                System.out.println("\tOlympic Pineapple Cream Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 90;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 90;
+                itemCount++;
+                break;
+            case 131:
+                System.out.println("\tPran Potata Spicy Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 125;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 125;
+                itemCount++;
+                break;
+            case 132:
+                System.out.println("\tOlympic Malai Cream Energy Plus Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 88;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 88;
+                itemCount++;
+                break;
+            case 133:
+                System.out.println("\tOlympic Nutty Real Peanut Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 95;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 95;
+                itemCount++;
+                break;
+            case 134:
+                System.out.println("\tFit Crakers Masala Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 95;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 95;
+                itemCount++;
+                break;
+            case 135:
+                System.out.println("\tDanish Doreo Black Chocolate Sandwich Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 180;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 180;
+                itemCount++;
+                break;
+            case 136:
+                System.out.println("\tIfad Choco Delight Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 100;
+                itemCount++;
+                break;
+            case 137:
+                System.out.println("\tCocola Lexus Vegetable Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 115;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 115;
+                itemCount++;
+                break;
+            case 138:
+                System.out.println("\tOlympic Milk Plus Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 75;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 75;
+                itemCount++;
+                break;
+            case 139:
+                System.out.println("\tCadbury Oreo Original Cream Biscuit Per 500 gm");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 230;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 230;
+                itemCount++;
+                break;
+
+//Noodles list +139
+            case 140:
+                System.out.println("\tCocola Egg Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 18;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 18;
+                itemCount++;
+                break;
+            case 141:
+                System.out.println("\tNestle Maggi 2-Minute Masala Instant Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 16;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 16;
+                itemCount++;
+                break;
+            case 142:
+                System.out.println("\tNestle Maggi 2-Minute Masala Blast Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 18;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 18;
+                itemCount++;
+                break;
+            case 143:
+                System.out.println("\tDoodles Stick Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 18;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 18;
+                itemCount++;
+                break;
+            case 144:
+                System.out.println("\tDoodles Masala Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 16;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 16;
+                itemCount++;
+                break;
+            case 145:
+                System.out.println("\tMr.Noodles Chicken Cup Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 30;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 30;
+                itemCount++;
+                break;
+            case 146:
+                System.out.println("\tCocola Chicken Masala Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 20;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 20;
+                itemCount++;
+                break;
+            case 147:
+                System.out.println("\tIfad Eggy Instant Masala Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 22;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 22;
+                itemCount++;
+                break;
+            case 148:
+                System.out.println("\tCocola Hot & Spicy Cup Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 30;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 30;
+                itemCount++;
+                break;
+            case 149:
+                System.out.println("\tMama Noodles Chicken Flavor Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 16;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 16;
+                itemCount++;
+                break;
+            case 150:
+                System.out.println("\tMama Hot & Spicy Cup Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 60;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 60;
+                itemCount++;
+                break;
+            case 151:
+                System.out.println("\tSajeeb Tandoori Chicken Noodles Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 20;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 20;
+                itemCount++;
+                break;
+            case 152:
+                System.out.println("\tMr.Noodles Magic Masala Per pack");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 16;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 16;
+                itemCount++;
+                break;
+
+//Powder Milk list +152
+            case 153:
+                System.out.println("\tDiploma Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 690;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 690;
+                itemCount++;
+                break;
+            case 154:
+                System.out.println("\tGoalini Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 540;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 540;
+                itemCount++;
+                break;
+            case 155:
+                System.out.println("\tArla Dano Daily Pusti Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 475;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 475;
+                itemCount++;
+                break;
+            case 156:
+                System.out.println("\tDanish Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 609;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 609;
+                itemCount++;
+                break;
+            case 157:
+                System.out.println("\tMarks Milk Powder (Poly) Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 700;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 700;
+                itemCount++;
+                break;
+            case 158:
+                System.out.println("\tNestle Nido Fortigrow Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 800;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 800;
+                itemCount++;
+                break;
+            case 159:
+                System.out.println("\tStarship Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 520;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 520;
+                itemCount++;
+                break;
+            case 160:
+                System.out.println("\tAarong Dairy Instant Low Fat Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 620;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 620;
+                itemCount++;
+                break;
+            case 161:
+                System.out.println("\tPran Full Cream Milk Powder Per Kg");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 680;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 680;
+                itemCount++;
+                break;
+
+//Soft Drinks list +161
+            case 162:
+                System.out.println("\tCoca-Cola Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 163:
+                System.out.println("\t7up Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 164:
+                System.out.println("\tSprite Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 165:
+                System.out.println("\tMountain Dew Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+            case 166:
+                System.out.println("\tPran Up Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 167:
+                System.out.println("\tClemon Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 45;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 45;
+                itemCount++;
+                break;
+            case 168:
+                System.out.println("\tMiranda Orange Per litre");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 50;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 50;
+                itemCount++;
+                break;
+
+//---------------------------------------------//
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^//
+//Male + 168
+            case 169:
+                System.out.println("\tShirt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1500;
+                itemCount++;
+                break;
+            case 170:
+                System.out.println("\tJeans");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2000;
+                itemCount++;
+                break;
+            case 171:
+                System.out.println("\tSuit");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 7000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 7000;
+                itemCount++;
+                break;
+            case 172:
+                System.out.println("\tT-shirt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1000;
+                itemCount++;
+                break;
+            case 173:
+                System.out.println("\tJacket");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1000;
+                itemCount++;
+                break;
+            case 174:
+                System.out.println("\tJersey");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 500;
+                itemCount++;
+                break;
+            case 175:
+                System.out.println("\tBelt");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 900;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 900;
+                itemCount++;
+                break;
+            case 176:
+                System.out.println("\tShoes");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 5000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5000;
+                itemCount++;
+                break;
+            case 177:
+                System.out.println("\tWatch");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1200;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1200;
+                itemCount++;
+                break;
+            case 178:
+                System.out.println("\tTie");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1200;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1200;
+                itemCount++;
+                break;
+
+//Female = 179
+            case 179:
+                System.out.println("\tSalwar Kamiz Three piece");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 5000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5000;
+                itemCount++;
+                break;
+            case 180:
+                System.out.println("\tSaree");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 35000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 35000;
+                itemCount++;
+                break;
+
+            case 181:
+                System.out.println("\tModern and Western");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 5000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5000;
+                itemCount++;
+                break;
+            case 182:
+                System.out.println("\tMuslim Collection");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 4000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 4000;
+                itemCount++;
+                break;
+            case 183:
+                System.out.println("\tHoodie");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1400;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1400;
+                itemCount++;
+                break;
+            case 184:
+                System.out.println("\tGirls Jacket");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 10000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 10000;
+                itemCount++;
+                break;
+            case 185:
+                System.out.println("\tKurti");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1500;
+                itemCount++;
+                break;
+            case 186:
+                System.out.println("\tTribal Traditional Dresses");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2000;
+                itemCount++;
+                break;
+            case 187:
+                System.out.println("Ladies Bag");
+                System.out.print("Quantity : ");
+
+                data = input.nextInt();
+                basePrice = 1500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1500;
+                itemCount++;
+                break;
+
+//Jewellery + 187
+            case 188:
+                System.out.println("\tEarrings");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 150;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 150;
+                itemCount++;
+                break;
+            case 189:
+                System.out.println("\tNose Pin");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 500;
+                itemCount++;
+                break;
+
+            case 190:
+                System.out.println("\tNecklaces");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1000;
+                itemCount++;
+                break;
+            case 191:
+                System.out.println("\tCuri");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 40;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 40;
+                itemCount++;
+                break;
+            case 192:
+                System.out.println("\tHair band");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 30;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 30;
+                itemCount++;
+                break;
+            case 193:
+                System.out.println("\tPayel");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 200;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 200;
+                itemCount++;
+                break;
+
+//Laptop - + 193
+//---------------------------------
+            case 194:
+                System.out.println("\tHP Laptop 15s-du3023TU");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 52000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 52000;
+                itemCount++;
+                break;
+
+            case 195:
+                System.out.println("\tDell Laptop-");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 73000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 73000;
+                itemCount++;
+                break;
+            case 196:
+                System.out.println("\tApple MacBook ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 10800;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5200;
+                itemCount++;
+                break;
+
+            case 197:
+                System.out.println("\tLenovo- IdeaPad Slim 3");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 43000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 43000;
+                itemCount++;
+                break;
+            // Desktop - + 197
+//---------------------------------
+            case 198:
+                System.out.println("\tRyzen-PC AMD Athlon 3000G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                //add = data * 22100;
+                basePrice = 22100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 22100;
+                itemCount++;
+                break;
+            case 199:
+                System.out.println("\tIntel Gaming PC ASRock B560 Pro4 ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 112500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 112500;
+                itemCount++;
+                break;
+
+            case 200:
+                System.out.println("\tRyzen Gaming PC- pc: Asrock B450M");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 110500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 110500;
+                itemCount++;
+                break;
+            case 201:
+                System.out.println("\tHP keyboard");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 600;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 600;
+                itemCount++;
+                break;
+                // Accessories + 201
+            case 202:
+                System.out.println("\tLogitech Keyboard & Mouse ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1750;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 1750;
+                itemCount++;
+                break;
+
+            case 203:
+                System.out.println("\tBluetooth Speaker");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 7500;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 7500;
+                itemCount++;
+                break;
+            case 204:
+                System.out.println("\tUSB 3.0 Mobile Disk Drive");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 550;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 550;
+                itemCount++;
+                break;
+
+            case 205:
+                System.out.println("\tHD WebCam ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 2000;
+                itemCount++;
+                break;
+            case 206:
+                System.out.println("\tA4TECH N-70FX ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 575;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 575;
+                itemCount++;
+                break;
+
+            //Sumsung Mobile + 206
+            case 207:
+                System.out.println("\tSamsung Galaxy M22");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 15000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 15000;
+                itemCount++;
+                break;
+            case 208:
+                System.out.println("\tSamsung Galaxy M32 5G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 20000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 20000;
+                itemCount++;
+                break;
+
+            case 209:
+                System.out.println("\tSamsung Galaxy A03s ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 18000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 18000;
+                itemCount++;
+                break;
+            case 210:
+                System.out.println("\tSamsung Galaxy A52s 5G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 25000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 25000;
+                itemCount++;
+                break;
+            //Sumsung Mobile + 210
+            case 211:
+                System.out.println("\tXiaomi Pad 5 Pro");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 32000;
+                itemCount++;
+                break;
+
+            case 212:
+                System.out.println("\tXiaomi Poco X3 GT ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 32000;
+                itemCount++;
+                break;
+            case 213:
+                System.out.println("\tXiaomi Poco M3 Pro 5G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 27000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 27000;
+                itemCount++;
+                break;
+            case 214:
+                System.out.println("\tXiaomi Redmi Note 10 Pro");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 34000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 34000;
+                itemCount++;
+                break;
+                //Apple + 214
+            case 215:
+                System.out.println("\tApple iPhone 13 Pro");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 82000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 82000;
+                itemCount++;
+                break;
+
+            case 216:
+                System.out.println("\tApple iPad mini (2021)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 42000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 42000;
+                itemCount++;
+                break;
+            case 217:
+                System.out.println("\tApple iPad 10.2");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 57000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 57000;
+                itemCount++;
+                break;
+            case 218:
+                System.out.println("\tApple iPhone 12");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 72000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 72000;
+                itemCount++;
+                break;
+//google +218
+            case 219:
+                System.out.println("\tGoogle Pixel 5a 5G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 23000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 23000;
+                itemCount++;
+                break;
+
+            case 220:
+                System.out.println("\tGoogle Pixel 4a 5G");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 21000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 21000;
+                itemCount++;
+                break;
+            case 221:
+                System.out.println("\tGoogle Pixel 3a");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1800;
+                totalPrice += add;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 57000;
+                itemCount++;
+                break;
+            case 222:
+                System.out.println("\tGoogle Pixel 4");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 26000;
+                totalPrice += basePrice;
+                collect[itemCount] = n;
+                quantity[itemCount] = data;
+                price2[itemCount] = 26000;
+                itemCount++;
+                break;
+
+
+
+                //Bed + 223
+
+            case 223:
+                System.out.println("\tMansion Bed");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32650;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 32650;
+                itemCount++;
+                break;
+            case 224:
+                System.out.println("\tLaker Polish Foam Box Bed");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 27600;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 27600;
+                itemCount++;
+                break;
+
+            case 225:
+                System.out.println("\tMedicated & Solid Wood Box Bed");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 11074;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 11074;
+                itemCount++;
+                break;
+
+// Table + 225
+            case 226:
+                System.out.println("\tMalaysian Processed Wood Dinning Table set");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 32499;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 32499;
+                itemCount++;
+                break;
+            case 227:
+                System.out.println("\tRFL Dinning Table-Restaurant Table ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2500;
+                itemCount++;
+                break;
+            case 228:
+                System.out.println("\tDinning Table With 6 chairs ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 31500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 31500;
+                itemCount++;
+                break;
+            case 229:
+                System.out.println("\tRFL Royal Coffee Table ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1700;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1700;
+                itemCount++;
+                break;
+
+//Wardrobe + 239
+            case 240:
+                System.out.println("\tWardrobe Malaysian");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 12500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 12500;
+                itemCount++;
+                break;
+            case 241:
+                System.out.println("\tPlatinum – Crown-5 Step");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 8500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 8500;
+                itemCount++;
+                break;
+            case 242:
+                System.out.println("\tMini Wooden Wardrobe ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3500;
+                itemCount++;
+                break;
+            case 243:
+                System.out.println("\tRFL Black & Gold Wardrobe ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 5600;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5600;
+                itemCount++;
+                break;
+//dressing+243
+            case 244:
+                System.out.println("\tMalaysian  Wood Dressing");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3500;
+                itemCount++;
+                break;
+            case 245:
+                System.out.println("\tDressing Table slim)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1100;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1100;
+                itemCount++;
+                break;
+ //Chair + 245
+            case 246:
+                System.out.println("\tRegal Metal Rocking Chair)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 6270;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 6270;
+                itemCount++;
+                break;
+            case 247:
+                System.out.println("\tDeko relax Chair");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 390;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 390;
+                itemCount++;
+                break;
+            case 248:
+                System.out.println("\tCaino Armless Chair");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1125;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1125;
+                itemCount++;
+                break;
+            case 249:
+                System.out.println("\tRestaurant chair");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 650;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 650;
+                itemCount++;
+                break;
+ //couch +249
+            case 250:
+                System.out.println("\tNyxi Faux Leader white  couch");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2930;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2930;
+                itemCount++;
+                break;
+            case 251:
+                System.out.println("\tFoldable Fabric couch");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3741;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3741;
+                itemCount++;
+                break;
+            case 252:
+                System.out.println("\tClassic Folding couch");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 9013;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 9013;
+                itemCount++;
+                break;
+                //Cabinet + 252
+            case 253:
+                System.out.println("\tBedroom Cabinet");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2930;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2930;
+                itemCount++;
+                break;
+
+            case 254:
+                System.out.println("\tKitchen Cabinet");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3741;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3741;
+                itemCount++;
+                break;
+            case 255:
+                System.out.println("\tFile Cabinet");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 9013;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 9013;
+                itemCount++;
+                break;
+//cabint + 255
+            case 256:
+                System.out.println("\tWood and Fabric ottoman");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 8000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 8000;
+                itemCount++;
+                break;
+            case 257:
+                System.out.println("\tNyxi Faux Leader white ottoman");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3930;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3930;
+                itemCount++;
+                break;
+            case 258:
+                System.out.println("\tFoldable Fabric Ottoman");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 3741;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 3741;
+                itemCount++;
+                break;
+            case 259:
+                System.out.println("\tClassic Folding Ottoman");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 9013;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 9013;
+                itemCount++;
+                break;
+                //stoll + 259
+            case 260:
+                System.out.println("\tWooden Frame & Artificial Cane Woven Stool");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 2450;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 2450;
+                itemCount++;
+                break;
+            case 261:
+                System.out.println("\tSquare Shape PU Leather Rest Stool");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 800;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 800;
+                itemCount++;
+                break;
+            case 262:
+                System.out.println("\tRFL Easy Stool");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 70;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 70;
+                itemCount++;
+                break;
+//chaise + 262
+            case 263:
+                System.out.println("\tWood Hotel Chaise Longue");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 35720;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 35720;
+                itemCount++;
+                break;
+
+            case 264:
+                System.out.println("\tGarden Chaise  Longue");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 1153;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 1153;
+                itemCount++;
+                break;
+            case 265:
+                System.out.println("\tLiving Room Chaise Longue");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 75675;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 75675;
+                itemCount++;
+                break;
+            case 266:
+                System.out.println("\tVIP waiting  Chaise Longue");
+                System.out.print("Quantity : ");
+
+                data = input.nextInt();
+                basePrice = 6377;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 6377;
+                itemCount++;
+                break;
+
+            //tv+266
+            case 267:
+                System.out.println("\tSamsung N5300 40 FHD Smart TV");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 36000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 36000;
+                itemCount++;
+                break;
+            case 268:
+                System.out.println("\tLG 55UM7340PVA 55 IPS UHD 4K Smart LED TV");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 74000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 74000;
+                itemCount++;
+                break;
+            case 269:
+                System.out.println("\tLG 49UM7340PVA 49 IPS UHD 4K Smart LED TV");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 60000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 60000;
+                itemCount++;
+                break;
+            case 270:
+                System.out.println("\tSamsung 55TU8000 55 Crystal UHD 4K Smart LED TV");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 70000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 70000;
+                itemCount++;
+                break;
+
+//Ac + 270
+            case 271:
+                System.out.println("\tGeneral ASGA18FMTB 1.5 Ton Split Air Conditioner");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 72000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 72000;
+                itemCount++;
+                break;
+            case 272:
+                System.out.println("\tGree GS24CT410 2 Ton Split Air Conditioner");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 67000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 67000;
+                itemCount++;
+                break;
+            case 273:
+                System.out.println("\tGeneral ASGA30AFC 2.5 Ton Split Air Conditioner ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 108000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 108000;
+                itemCount++;
+                break;
+            case 274:
+                System.out.println("\tELITE 1.5 Ton Split type Non-Inverter Air Conditioner");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 36000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 36000;
+                itemCount++;
+                break;
+
+//Camera info + 274
+            case 275:
+                System.out.println("\tCanon EOS 80D DSLR Camera with 18-135mm IS USM Lens");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 98000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 98000;
+                itemCount++;
+                break;
+            case 276:
+                System.out.println("\tNikon D5600 DSLR Camera with 18-55mm Lens");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 61500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 61500;
+                itemCount++;
+                break;
+            case 277:
+                System.out.println("\tCANON EOS 2000D 24.1MP WITH 18-55MM KIT LENS FULL HD");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 41500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 41500;
+                itemCount++;
+                break;
+            case 278:
+                System.out.println("\tNikon D500 DSLR Camera (only body)");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 145000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 145000;
+                itemCount++;
+                break;
+
+//samrt + 278
+            case 279:
+                System.out.println("\tApple Watch SE (MYDM2LL/A) GPS 40mm Sport Band");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 30900;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 30900;
+                itemCount++;
+                break;
+            case 280:
+                System.out.println("\tXiaomi Haylou LS02 Touch Screen Square Shape Smart Watch Black");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 25500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 25500;
+                itemCount++;
+                break;
+            case 281:
+                System.out.println("\tRealme RMA161 1.4 Square Activity Tracker Smart Watch Black");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 38500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 38500;
+                itemCount++;
+                break;
+//Pre order
+            case 282:
+                System.out.println("\tHidden Cameras");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 10000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 10000;
+                itemCount++;
+                break;
+            case 283:
+                System.out.println("Rainbow Flatware  ");
+                System.out.print("Quantity : ");
+
+                data = input.nextInt();
+                basePrice = 70000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 70000;
+                itemCount++;
+                break;
+            case 284:
+                System.out.println("\tSmart Personal Air Cooler ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 5000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 5000;
+                itemCount++;
+                break;
+            case 285:
+                System.out.println("\tReusable Straws");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 4533;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 4533;
+                itemCount++;
+                break;
+            case 286:
+                System.out.println("\tWooden Alarm Clock");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 9000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 9000;
+                itemCount++;
+                break;
+
+            case 287:
+                System.out.println("\tBaby Feather Wings");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice =  400;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] =  400;
+                itemCount++;
+                break;
+            case 288:
+                System.out.println("\tHair Removal Epilator");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice =  500;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] =  500;
+                itemCount++;
+                break;
+            case 289:
+                System.out.println("\tDog Treat Launcher                      ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice = 300;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 300;
+                itemCount++;
+                break;
+            case  290:
+                System.out.println("\tM1 Pro and M1 Max MacBook          ");
+                System.out.print("\tQuantity : ");
+
+                data = input.nextInt();
+                basePrice =  102000;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 102000;
+                itemCount++;
+                break;
+            case  291:
+                System.out.println("\tGoogle Pixel 6 Pro    ");
+                System.out.print("Quantity : ");
+
+                data = input.nextInt();
+                basePrice =  107490;
+                totalPrice += basePrice;
+                collect[ci++] = n;
+                quantity[qi++] = data;
+                price2[pri++] = 107490;
+                itemCount++;
+                break;
+
 
 
         }
+    }
+
+    public void takenItemPrint() {
+
+
+
+        System.out.println("\n\n\t---------------------------------");
+        System.out.println("\tTotal Item Count : " + itemCount);
+        System.out.println("\t---------------------------------\n\n");
+
+
+        System.out.println("\t\t Purchase History ");
+        System.out.println("\tCode Number\tQuantity \tPrice\tTotal Price");
+        System.out.println("\n\t--------------------------------------------------\n");
+
+        for (int j = 0; j < itemCount; j++) {
+
+            System.out.print("\t"+collect[j]+"\t\t"+ quantity[j]+"\t\t"+price2[j]+"\t\t"+quantity[j]*price2[j]+"\n");
+            totalCost += (quantity[j]*price2[j]);
+            System.out.println("\t--------------------------------------------------");
+            }
+        System.out.println("\tTotal Cost ---------------------------------"+totalCost);
+    }
+
+    public void  preOrder()
+    {
+        System.out.println("\n\tBelow This Product Comming soon \n");
+        System.out.println("\t---------------------------------\n");
+
+        System.out.println("\t1. Hidden Cameras                        10000\n"+
+                           "\t2. Rainbow Flatware                      70000\n" +
+                           "\t3. Smart Personal Air Cooler             5000\n" +
+                           "\t4. Reusable Straws                       4533\n" +
+                           "\t5. Wooden Alarm Clock                    90000\n" +
+                           "\t6. Baby Feather Wings                     400\n" +
+                           "\t7. Hair Removal Epilator                  500\n" +
+                           "\t8. Dog Treat Launcher                     300\n" +
+                           "\t9. M1 Pro and M1 Max MacBook             102000\n" +
+                           "\t10. Google Pixel 6 Pro                   107490\n");
+
+          System.out.println("\t-------------------------------");
+
+            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            item = input.nextInt();
+
+            for (int k = 0; k < item; k++) {
+                System.out.println("\tEnter Code Numnber : ");
+                int code = input.nextInt();
+                if (code >= 1 && code <= 3)
+                {
+                    itemCode(code+281);
+                }
+                else
+                {
+                    System.out.println("\tOut of Range");
+                }
+
+            }
+
+
     }
 }
