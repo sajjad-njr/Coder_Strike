@@ -29,7 +29,7 @@ public class Electronics {
 //       System.out.println("\n*** Electronics ***\n\n\t1. COMPUTER\n\t2. MOBILE\n\t3. OTHERS\n");
 //    }
 
-    public void showDisplay(){ // this method for mobile information
+    public void showDisplay(){ // this method for All mobile Information
 
         System.out.println("\n");
         System.out.println("\tName: "+name);
