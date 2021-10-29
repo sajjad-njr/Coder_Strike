@@ -46,9 +46,9 @@ public class LogIn extends FilePutUserData {
 //        }
         if(firstName.equals(dataCollect[0]) && setPass.equals( dataCollect[4] ))
         {
-            System.out.println("*****************************");
-            System.out.println("\t  Log in Successful         ");
-            System.out.println("-----------------------------");
+            System.out.println("\n\n\t*****************************");
+            System.out.println("\t       Log in Successful         ");
+            System.out.println("\t-----------------------------");
             return true;
         }
         else return false;

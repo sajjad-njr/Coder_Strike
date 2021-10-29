@@ -72,7 +72,7 @@ public class Submain extends AllMethodsCombine{
     //so called all functions technacally call here after log in
     public void catagoriesPart()
     {
-        System.out.println("\n\t1. Grocery \n\t2. Cloths\n\t3. Electronics\n\t4. Furniture\n\t5. Payment \n\t6. Exit\n");
+        System.out.println("\n\t1. Electronics \n\t2. Cloths\n\t3. Grocery\n\t4. Furniture\n\t5. Payment \n\t6. Exit\n");
 
         System.out.println("\t---------------------------------\n");
         int var;
@@ -84,10 +84,11 @@ public class Submain extends AllMethodsCombine{
             {
                 case 1:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\t         Grocery Part       ");
+                    System.out.println("\t         Electronics Part       ");
                     System.out.println("\t----------------------------");
                     //System.out.println(" Item Count : " + itemCount);
-                    GroMain();
+                    electronicsAllMedtod();
+
 
                     break;
                 case 2:
@@ -99,10 +100,11 @@ public class Submain extends AllMethodsCombine{
                     break;
                 case 3:
                     System.out.println("\n\t----------------------------");
-                    System.out.println("\t       Electronics Part       ");
+                    System.out.println("\t      Grocery Part       ");
                     System.out.println("\t----------------------------");
+                    GroMain();
                    // System.out.println(" Item Count : " + itemCount);
-                    electronicsAllMedtod();
+
                     break;
                 case 4:
                     System.out.println("\n\t----------------------------");
@@ -163,6 +165,7 @@ public class Submain extends AllMethodsCombine{
 
         if(data == 1)
         {
+            welcomeRegMessage();
             registrationFrom();
 
         }
@@ -174,12 +177,7 @@ public class Submain extends AllMethodsCombine{
         else if(data == 3)
         {
             aboutWork();
-            System.out.println("\tEnter '1' for Back : ");
-            int c = input.nextInt();
-            if(c == 1)
-            {
-                subMainPart();
-            }
+            backtoAbout();
         }
         else if(data == 4)
         {
@@ -197,6 +195,28 @@ public class Submain extends AllMethodsCombine{
 
     }
 
+    void welcomeRegMessage()
+    {
+        System.out.println("\n\t-------------Welcome to Easy Shop Family ----------------\n");
+        System.out.println("\n\t--Very carefully enter you First and Last name ");
+        System.out.println("\n\t--Both name together be your file name ");
+        System.out.println("\n\t--Enter right address that help in further payment option ");
+        System.out.println("\n\t--Remember your first name last name and Password for Log in ");
+        System.out.println("\n\t------------------------------------------------------------------\n\n");
+    }
+    void backtoAbout()
+    {
+        System.out.print("\n\n\t'0' for Back : ");
+        int c = input.nextInt();
+        if(c == 0)
+        {
+            subMainPart();
+        }
+        else
+        {
+            backtoAbout();
+        }
+    }
     void aboutWork()
     {
         Scanner input = new Scanner(System.in);
@@ -220,11 +240,11 @@ public class Submain extends AllMethodsCombine{
     {
         if(itemCount == 0)
         {
-            System.out.println("\n\tYou did not buy anything yet .!!");
+            System.out.println("\n\t---You did not buy anything yet .!!");
 
-            System.out.println("\n\tIf we want to buy daily goods press '1'");
-            System.out.println("\tShow Pre Order  ITEM press '2'\n");
-            System.out.print("\tChoice an Option :  ");
+            System.out.println("\n\t---If we want to buy daily goods press '1'");
+            System.out.println("\t---Show Pre Order  ITEM press '2'\n");
+            System.out.print("\t---Choice an Option :  ");
 
 
             int var1 = input.nextInt();
@@ -236,6 +256,7 @@ public class Submain extends AllMethodsCombine{
             else if(var1 == 2)
             {
                 preOrder();
+                preOrderGiva();
                 backCatagories();
             }
 
@@ -249,9 +270,35 @@ public class Submain extends AllMethodsCombine{
 
     }
 
+    void preOrderGiva()
+    {
+        System.out.println("\t'0' for back \n");
+        System.out.print("\tEnter Number of Item that You Want to Buy : ");
+        item = input.nextInt();
+
+        if(item == 0)catagoriesPart();
+        else
+        {
+            for (int k = 0; k < item; k++) {
+                System.out.println("\tEnter Code Numnber : ");
+                int code = input.nextInt();
+                if (code >= 1 && code <= 3)
+                {
+                    itemCode(code+281);
+                }
+                else
+                {
+                    System.out.println("\tOut of Range");
+                }
+
+            }
+        }
+
+
+    }
     void backCatagories()
     {
-        System.out.println("'1' For back : ");
+        System.out.println("\t'1' For back : ");
         System.out.print("\tChoice an option : ");
         int a = input.nextInt();
         if(a==1)
@@ -263,12 +310,15 @@ public class Submain extends AllMethodsCombine{
             backCatagories();
         }
     }
+
+    // Payment Methods start  , Payment Either mobile banking or Card
     public void clearPayment()
     {
 
-        System.out.println("\t---------------------------------\n");
-        System.out.println("\n\t1. Self Delivery\t2. Home Delivery");
-        System.out.print("\tFor Payment Choice Option = ");
+        System.out.println("\n\n\tChoice Delivery Option\n");
+        System.out.println("\t---------------------------------");
+        System.out.println("\n\t1. Self Delivery\t2. Home Delivery\n");
+        System.out.print("\tEnter an Option = ");
 
         int del = input.nextInt();
 
@@ -316,8 +366,10 @@ public class Submain extends AllMethodsCombine{
         }
     }
 
+    //Here All transection Occure . Like Payment methods are B-kas , nagad , Visa Card
     void paymentCardOrMobile()
     {
+        System.out.println("\n\tFor Payment Choice below one Method");
         System.out.println("\n\t1. card \t2. Mobile Banking\n");
 //       System.out.println("\t*********************************\n");
         System.out.println("\t---------------------------------\n");
@@ -328,8 +380,13 @@ public class Submain extends AllMethodsCombine{
         {
             System.out.println();
 
-            System.out.print("\n\tEnter Your Card Number : ");
+            System.out.print("\n\tInsert Your Card Number : ");
             int visa = input.nextInt();
+
+            System.out.println("\n\t--------------------");
+            System.out.println("\tPayment Successfull ");
+            System.out.println("\t--------------------\n");
+
             System.out.println("\tThank you for your Payment ");
         }
         else if(card == 2)
@@ -347,7 +404,12 @@ public class Submain extends AllMethodsCombine{
                 int bkas = input.nextInt();
                 System.out.print("\tEnter your  PIN  Number = ");
                 int bkasPin = input.nextInt();
-                System.out.println("\nThank you for your Payment ");
+                System.out.println("\n\t--------------------");
+                System.out.println("\tPayment Successfull ");
+                System.out.println("\t--------------------\n");
+
+                System.out.println("\tThank you for your Payment ");
+
             }
             else if(visa == 2)
             {
@@ -355,7 +417,11 @@ public class Submain extends AllMethodsCombine{
                 int bkas = input.nextInt();
                 System.out.print("\tEnter your  PIN  Number : ");
                 int bkasPin = input.nextInt();
-                System.out.print("\tThank you for your Payment  ");
+                System.out.println("\n\t--------------------");
+                System.out.println("\tPayment Successfull ");
+                System.out.println("\t--------------------\n");
+
+                System.out.println("\tThank you for your Payment ");
             }
             else if(visa == 3)
             {
@@ -363,7 +429,11 @@ public class Submain extends AllMethodsCombine{
                 int bkas = input.nextInt();
                 System.out.print("\tEnter your  PIN  Number ");
                 int bkasPin = input.nextInt();
-                System.out.print("\nThank you for your Payment ");
+                System.out.println("\n\t--------------------");
+                System.out.println("\tPayment Successfull ");
+                System.out.println("\t--------------------\n");
+
+                System.out.println("\tThank you for your Payment ");
             }
 
         }

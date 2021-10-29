@@ -5,7 +5,7 @@ public class OtherInfo implements Other{
 
     @Override
     public void othersName() {
-        System.out.println("\n\t1. TV\n\t2. AC\n\t3. Camera\n\t4. Amart Watch\n");
+        System.out.println("\n\t1. TV\n\t2. AC\n\t3. Camera\n\t4. Smart Watch\n\t5. Back");
     }
 
     @Override

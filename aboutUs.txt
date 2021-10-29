@@ -7,4 +7,6 @@
     ii. Second  part shows the option to buyers for choosing one particular item or multiple 
 
     iii. After selecting items, customer can pay via Bkash/credit card or cash on delivery with 
-         delivery charge depends on distance.Also he can show the update of pre order 
+         delivery charge depends on distance.Also he can show the update of pre order
+
+    ----------------------------Thank You for with us !! ------------------------------

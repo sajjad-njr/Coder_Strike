@@ -1220,7 +1220,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackTvtoOtherInfoMain();
+                otherInfoMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1244,7 +1244,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackActoOtherInfoMain();
+                otherInfoMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1267,7 +1267,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackCameratoOtherInfoMain();
+                otherInfoMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1290,7 +1290,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                BackSmartWatchOtherInfoMain();
+                otherInfoMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1562,7 +1562,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToMobileMainMethod();
+                clotheAllMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1584,7 +1584,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToMobileMainMethod();
+                clotheAllMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1607,7 +1607,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToMobileMainMethod();
+                clotheAllMethod();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1651,7 +1651,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1674,7 +1674,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1696,7 +1696,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1717,7 +1717,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1738,7 +1738,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1759,7 +1759,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1780,7 +1780,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1801,7 +1801,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1822,7 +1822,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -1843,7 +1843,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToFurnitureMain();
+                furintureMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -5530,24 +5530,22 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void takenItemPrint() {
 
-
-
         System.out.println("\n\n\t---------------------------------");
         System.out.println("\tTotal Item Count : " + itemCount);
         System.out.println("\t---------------------------------\n\n");
 
 
-        System.out.println("\t\t Purchase History ");
-        System.out.println("\tCode Number\tQuantity \tPrice\tTotal Price");
-        System.out.println("\n\t--------------------------------------------------\n");
+        System.out.println("\t\t---- Purchase History ----\n");
+        System.out.println("\tCode NO. \tQuantity \tPrice\tTotal Price");
+        System.out.println("\t--------------------------------------------------\n");
 
         for (int j = 0; j < itemCount; j++) {
 
-            System.out.print("\t"+collect[j]+"\t\t"+ quantity[j]+"\t\t"+price2[j]+"\t\t"+quantity[j]*price2[j]+"\n");
+            System.out.print("\t"+collect[j]+"\t\t\t\t"+ quantity[j]+"\t\t"+price2[j]+"\t\t"+quantity[j]*price2[j]+"\n");
             totalCost += (quantity[j]*price2[j]);
             System.out.println("\t--------------------------------------------------");
             }
-        System.out.println("\tTotal Cost ---------------------------------"+totalCost);
+        System.out.println("\tTotal Cost -------------------------- = "+totalCost);
     }
 
     public void  preOrder()
@@ -5566,24 +5564,26 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                            "\t9. M1 Pro and M1 Max MacBook             102000\n" +
                            "\t10. Google Pixel 6 Pro                   107490\n");
 
-          System.out.println("\t-------------------------------");
+          System.out.println("\t------------------------------------------------");
 
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
-            item = input.nextInt();
-
-            for (int k = 0; k < item; k++) {
-                System.out.println("\tEnter Code Numnber : ");
-                int code = input.nextInt();
-                if (code >= 1 && code <= 3)
-                {
-                    itemCode(code+281);
-                }
-                else
-                {
-                    System.out.println("\tOut of Range");
-                }
-
-            }
+//            System.out.println("\t'0' for back \n");
+//            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+//            item = input.nextInt();
+//
+//            if(item == 0)
+//            for (int k = 0; k < item; k++) {
+//                System.out.println("\tEnter Code Numnber : ");
+//                int code = input.nextInt();
+//                if (code >= 1 && code <= 3)
+//                {
+//                    itemCode(code+281);
+//                }
+//                else
+//                {
+//                    System.out.println("\tOut of Range");
+//                }
+//
+//            }
 
 
     }
