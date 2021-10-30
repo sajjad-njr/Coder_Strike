@@ -19,7 +19,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
 
     public void GroMain(){
-        System.out.println("\n\t1. Rice\t\t\t\t\t\t2. Dal\n\n\t3. Salt\t\t\t\t\t\t4. Flour\n\n\t5. Masala\t\t\t\t\t6. Suji\n\n\t7. Egg\t\t\t\t\t\t8. Pea-flour\n\n\t9. Edible Oil\t\t\t\t10. Vinegar\n\n\t11. Tea Bag\t\t\t\t\t12. Tea Poly Bag\n\n\t13. Vermicelli\t\t\t\t14. Peanut\n\n\t15. Biscuit\t\t\t\t\t16. Noodles\n\n\t17. Powder Milk\t\t\t\t18. Soft Drinks\n\n\t\t\t19. Back\n");
+        System.out.println("\n\t1. Rice\t\t\t\t\t\t2. Dal\n\n\t3. Salt\t\t\t\t\t\t4. Flour\n\n\t5. Masala\t\t\t\t\t6. Suji\n\n\t7. Egg\t\t\t\t\t\t8. Pea-flour\n\n\t9. Edible Oil\t\t\t\t10. Vinegar\n\n\t11. Tea Bag\t\t\t\t\t12. Tea Poly Bag\n\n\t13. Vermicelli\t\t\t\t14. Peanut\n\n\t15. Biscuit\t\t\t\t\t16. Noodles\n\n\t17. Powder Milk\t\t\t\t18. Soft Drinks\n\n\t\t19. Back\n");
         System.out.print("\n\tChoice an Option : ");
         int num = input.nextInt();
         switch (num){
@@ -748,7 +748,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToComputerMainMethod();
+                computerMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -771,7 +771,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToComputerMainMethod();
+                computerMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
@@ -795,7 +795,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
-                backToComputerMainMethod();
+                computerMain();
             } else {
                 for (int k = 0; k < item; k++) {
 
