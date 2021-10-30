@@ -70,7 +70,8 @@ public class LogIn extends FilePutUserData {
 
             if(firstName.equals(arrName[0]) && setPassword.equals( arrName[4] ))
             {
-                System.out.println("\n\tLog in Successful");
+                System.out.println("\n\t       Log in Successful         ");
+                System.out.println("\t-----------------------------\n");
             }
             else
             {
@@ -78,7 +79,7 @@ public class LogIn extends FilePutUserData {
                 System.out.println("\n\t Password wrong ");
                 int a;
                 System.out.println("\n\t Enter '1' to show your data ");
-                System.out.print("\n\t Choice an Option : ");
+                System.out.print("n\t Choice an Option : ");
                 a = input.nextInt();
                 if(a == 1)
                 {

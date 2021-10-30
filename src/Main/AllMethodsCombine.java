@@ -20,15 +20,15 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void GroMain(){
         System.out.println("\n\t1. Rice\t\t\t\t\t\t2. Dal\n\n\t3. Salt\t\t\t\t\t\t4. Flour\n\n\t5. Masala\t\t\t\t\t6. Suji\n\n\t7. Egg\t\t\t\t\t\t8. Pea-flour\n\n\t9. Edible Oil\t\t\t\t10. Vinegar\n\n\t11. Tea Bag\t\t\t\t\t12. Tea Poly Bag\n\n\t13. Vermicelli\t\t\t\t14. Peanut\n\n\t15. Biscuit\t\t\t\t\t16. Noodles\n\n\t17. Powder Milk\t\t\t\t18. Soft Drinks\n\n\t\t\t19. Back\n");
-        System.out.print("\tChoice an Option : ");
+        System.out.print("\n\tChoice an Option : ");
         int num = input.nextInt();
         switch (num){
             case 1:
 
                 riceList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                   item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -36,12 +36,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 12) {
                             itemCode(code);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -51,8 +51,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 2:
                 dalList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                  item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -60,12 +60,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 12) {
                             itemCode(code+12);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -75,8 +75,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 3:
                 saltList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -84,12 +84,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 7) {
                             itemCode(code+ 24);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -99,8 +99,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 4:
                 flourList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -108,12 +108,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 20) {
                             itemCode(code + 31);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -122,8 +122,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 5:
                 masalaList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -131,12 +131,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 15) {
                             itemCode(code+51);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -145,8 +145,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 6:
                 sujiList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -154,12 +154,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 8) {
                             itemCode(code+ 66);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -167,8 +167,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 7:
                 eggList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -176,12 +176,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 4) {
                             itemCode(code + 74);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -189,8 +189,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 8:
                 peaFlourList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -198,12 +198,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 3) {
                             itemCode(code+ 78);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -212,8 +212,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 9:
                 edibleOilList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -221,12 +221,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 13) {
                             itemCode(code+81);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -235,8 +235,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 10:
                 VinegarList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -244,12 +244,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 8) {
                             itemCode(code+94);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -259,8 +259,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 11:
                // teaBagList();
                 teaList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -268,12 +268,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 6) {
                             itemCode(code+102);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -283,8 +283,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 //teaList();
                 teaBagList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -292,12 +292,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 4) {
                             itemCode(code+108);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -306,8 +306,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 13:
                 vermicelliList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -315,12 +315,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 8) {
                             itemCode(code+112);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -329,8 +329,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 14:
                 peanutList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -338,12 +338,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 5) {
                             itemCode(code+120);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -352,7 +352,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 15:
                 biscuitList();
-                System.out.println("\t'0' For Back ");
+                System.out.println("\n\t'0' For Back ");
                 System.out.print("\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
@@ -361,12 +361,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 14) {
                             itemCode(code+125);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -374,8 +374,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 16:
                 noodlesList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -383,12 +383,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.println("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 13) {
                             itemCode(code+139);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -397,8 +397,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             case 17:
                 powderMilkList();
 
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -406,12 +406,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.print("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 9) {
                             itemCode(code+152);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -419,8 +419,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 break;
             case 18:
                 softDrinksList();
-                System.out.println("\t'0' For Back ");
-                System.out.print("\tEnter Number of Item that You Want to Buy : ");
+                System.out.println("\n\t'0' For Back ");
+                System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
                 item = input.nextInt();
                 //takeItem(item);
                 if (item == 0) {
@@ -428,12 +428,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
                 } else {
                     for (int k = 0; k < item; k++) {
 
-                        System.out.println("\tEnter Code Numnber : ");
+                        System.out.println("\n\tEnter Code Numnber : ");
                         int code = input.nextInt();
                         if (code >= 1 && code <= 7) {
                             itemCode(code+161);
                         } else {
-                            System.out.println("\tOut of Range");
+                            System.out.println("\n\tOut of Range");
                         }
                     }
                 }
@@ -453,7 +453,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.flush();
     }
     public void riceList(){
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        R I C E                       ");
         System.out.println("\n\t------------------------------------------------------\n");
 
@@ -468,10 +468,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t9.  Supreme Basmati Rice\n\tPer Kg: 250 BDT\n");
         System.out.print("\n\t10. Ispahani Parbon Jirashail Rice\n\tPer Kg: 80 BDT\n");
         System.out.print("\n\t11. Premium Miniket Rice\n\tPer Kg: 65 BDT\n");
-        System.out.print("\n\t12. Pran Chinigura Rice\n\tPer Kg: 125 BDT\n");
+        System.out.print("\n\t12. Pran Chinigura Rice\n\tPer Kg: 125 BDT\n\n");
     }
     public void dalList(){
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        D A L                         ");
         System.out.println("\n\t------------------------------------------------------\n");
 
@@ -486,10 +486,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t9.  Garbanzo Peeled (Khosha Charano Chola Boot)\n\tPer Kg: 140 BDT\n");
         System.out.print("\n\t10. Mashkolai Dal Peeled\n\tPer Kg: 200 BDT\n");
         System.out.print("\n\t11. Kheshari Dal\n\tPer Kg: 100 BDT\n");
-        System.out.print("\n\t12. Motor Dal\n\tPer Kg: 180 BDT\n");
+        System.out.print("\n\t12. Motor Dal\n\tPer Kg: 180 BDT\n\n");
     }
     public void saltList(){
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                         S A L T                       ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. ACI Pure Salt\n\tPer Kg: 35 BDT");
@@ -498,10 +498,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t4. Muskan Salt\n\tPer Kg: 35 BDT\n");
         System.out.print("\n\t5. Pran Salt\n\tPer Kg: 38 BDT\n");
         System.out.print("\n\t6. Molla Super Salt\n\tPer Kg: 32 BDT\n");
-        System.out.print("\n\t7. Sena Salt\n\tPer Kg: 32 BDT\n");
+        System.out.print("\n\t7. Sena Salt\n\tPer Kg: 32 BDT\n\n");
     }
     public void flourList(){
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        F L O U R                        ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1.  Teer Atta\n\tPer Kg: 42 BDT");
@@ -523,10 +523,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t17. Shaad Brown Atta\n\tPer Kg: 45 BDT\n");
         System.out.print("\n\t18. Pusti Maida\n\tPer Kg: 49 BDT\n");
         System.out.print("\n\t19. BPM Red Rice Flour\n\tPer Kg: 100 BDT\n");
-        System.out.print("\n\t20. Fresh Whole Wheat Atta\n\tPer Kg: 44 BDT\n");
+        System.out.print("\n\t20. Fresh Whole Wheat Atta\n\tPer Kg: 44 BDT\n\n");
     }
     public void masalaList(){
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                     M A S A L A                       ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.print("\n\t1.  Cumin Seed (Jira)\n\tPer Kg: 390  BDT");
@@ -546,7 +546,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t15. Mix Spice (Pach Foron)\n\tPer Kg: 290  BDT\n\n");
     }
     public void sujiList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                       S U J I                      ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Ifad Suji\n\tPer Kg: 64 BDT");
@@ -556,10 +556,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t5. ACI Pure Suji\n\tPer Kg: 64 BDT\n");
         System.out.print("\n\t6. Muskaan Suji\n\tPer Kg: 64 BDT\n");
         System.out.print("\n\t7. Shaad Suji\n\tPer Kg: 64 BDT\n");
-        System.out.print("\n\t8. Pusti Suji\n\tPer Kg: 64 BDT\n");
+        System.out.print("\n\t8. Pusti Suji\n\tPer Kg: 64 BDT\n\n");
     }
     public void eggList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        E G G                          ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Chicken Eggs (Layer)\n\tPer 4 pcs: 36 BDT");
@@ -568,15 +568,15 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t4. Organic Chicken Eggs (Deshi)\n\tPer 4 pcs: 50 BDT\n\n");
     }
     public void peaFlourList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                     P E A - F L O U R                    ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Booter Beshon\n\tPer Kg: 98  BDT\n");
         System.out.print("\n\t2. Fit Food Beshon\n\tPer Kg: 516 BDT\n");
-        System.out.print("\n\t3. BPM Mashkalai Bason\n\tPer Kg: 220 BDT\n");
+        System.out.print("\n\t3. BPM Mashkalai Bason\n\tPer Kg: 220 BDT\n\n");
     }
     public void edibleOilList() {
-        System.out.println("\n\t------------------------------------------------------\n");
+        System.out.println("\n\n\t------------------------------------------------------\n");
         System.out.println("\n\t                         E D I B L E                      ");
         System.out.println("\n\t------------------------------------------------------\n");
 
@@ -592,10 +592,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t10. Shaad Mustard Oil\n\tPer litre: 260  BDT\n");
         System.out.print("\n\t11. Fortune Rice Bran Oil\n\tPer litre: 195  BDT\n");
         System.out.print("\n\t12. Teer Soyabean Oil\n\tPer litre: 145  BDT\n");
-        System.out.print("\n\t13. Radhuni Pure Mustard Oil\n\tPer litre: 270  BDT\n");
+        System.out.print("\n\t13. Radhuni Pure Mustard Oil\n\tPer litre: 270  BDT\n\n");
     }
     public void VinegarList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        V I N E G A R                       ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. BD Vinegar \n\tPer litre: 85  BDT");
@@ -605,10 +605,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t5. Saporito Red Grape Vinegar\n\tPer litre: 660 BDT\n");
         System.out.print("\n\t6. Ahmed White Vinegar\n\tPer litre: 130 BDT\n");
         System.out.print("\n\t7. Heinz White Vinegar\n\tPer litre: 420 BDT\n");
-        System.out.print("\n\t8. Borges Apple Cider Vinegar\nPer litre: 555 BDT\n");
+        System.out.print("\n\t8. Borges Apple Cider Vinegar\nPer litre: 555 BDT\n\n");
     }
     public void teaList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        T E A                         ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Brooke Bond Taaza Black Tea\n\tPer Kg: 500 BDT");
@@ -616,19 +616,19 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t3. Nestea Iced Tea Lemon\n\tPer Kg: 600 BDT\n");
         System.out.print("\n\t4. Finlay Premium Tea\n\tPer Kg: 520 BDT\n");
         System.out.print("\n\t5. Muskan BOP Tea\n\tPer Kg: 360 BDT\n");
-        System.out.print("\n\t6. Ispahani Zareen Premium Tea\n\tPer Kg: 600 BDT\n");
+        System.out.print("\n\t6. Ispahani Zareen Premium Tea\n\tPer Kg: 600 BDT\n\n");
     }
     public void teaBagList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        T E A -- B A G                     ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Ispahani Mirzapore Tea Bag\n\tPer 50 pcs: 85  BDT");
         System.out.print("\n\t2. Kazi & Kazi Green Tea\n\tPer 50 pcs: 210 BDT\n");
         System.out.print("\n\t3. Tetley Premium Tea Bags\n\tPer 50 pcs: 75  BDT\n");
-        System.out.print("\n\t4. Finlays Pure Green Tea\n\tPer 50 pcs: 110 BDT\n");
+        System.out.print("\n\t4. Finlays Pure Green Tea\n\tPer 50 pcs: 110 BDT\n\n");
     }
     public void vermicelliList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        V E R M I C E L L I                       ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Cock Vermicelli\n\tPer Kg: 175 BDT");
@@ -638,20 +638,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t5. BD Vermicelli\n\tPer Kg: 175 BDT\n");
         System.out.print("\n\t6. Bashundhara Vermicelli Shemai\n\tPer Kg: 165 BDT\n");
         System.out.print("\n\t7. Banoful Vermicelli Shemai\n\tPer Kg: 175 BDT\n");
-        System.out.print("\n\t8. Arku Vermicelli\n\tPer Kg: 160 BDT\n");
+        System.out.print("\n\t8. Arku Vermicelli\n\tPer Kg: 160 BDT\n\n");
     }
     public void peanutList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                         P E A N U                     ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1. Kaju Badam (Cashew Nut)\n\tPer Kg: 1090 BDT");
         System.out.print("\n\t2. Almonds (Kath Badam)\n\tPer Kg: 990  BDT\n");
         System.out.print("\n\t3. Peanut Raw (Kacha Cheena Badam)\n\tPer Kg: 290  BDT\n");
         System.out.print("\n\t4. Peanut Peeled (Vaja Cheena Badam)\n\tPer Kg: 390  BDT\n");
-        System.out.print("\n\t5. Pistachios (Pesta Badam)\n\tPer Kg: 2190 BDT\n");
+        System.out.print("\n\t5. Pistachios (Pesta Badam)\n\tPer Kg: 2190 BDT\n\n");
     }
     public void biscuitList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                         B I S C U I T                        ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1.  Olympic Premium Energy Plus Biscuit\n\tPer 500 gm: 85  BDT");
@@ -667,10 +667,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t11. Ifad Choco Delight Biscuit\n\tPer 500 gm: 100 BDT\n");
         System.out.print("\n\t12. Cocola Lexus Vegetable Biscuit\n\tPer 500 gm: 115 BDT\n");
         System.out.print("\n\t13. Olympic Milk Plus Biscuit\n\tPer 500 gm: 75  BDT\n");
-        System.out.print("\n\t14. Cadbury Oreo Original Cream Biscuit\n\tPer 500 gm: 230 BDT\n");
+        System.out.print("\n\t14. Cadbury Oreo Original Cream Biscuit\n\tPer 500 gm: 230 BDT\n\n");
     }
     public void noodlesList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                       N O O D L E S                      ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.println("\n\t1.  Cocola Egg Noodles\n\tPer pack: 18 BDT");
@@ -685,10 +685,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t10. Mama Noodles Chicken Flavor\n\tPer pack: 16 BDT\n");
         System.out.print("\n\t11. Mama Hot & Spicy Cup Noodles\n\tPer pack: 60 BDT\n");
         System.out.print("\n\t12. Sajeeb Tandoori Chicken Noodles\n\tPer pack: 20 BDT\n");
-        System.out.print("\n\t13. Mr.Noodles Magic Masala\n\tPer pack: 16 BDT\n");
+        System.out.print("\n\t13. Mr.Noodles Magic Masala\n\tPer pack: 16 BDT\n\n");
     }
     public void powderMilkList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                        P O W D E R --  M I L K                        ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.print("\n\t1. Diploma Full Cream Milk Powder\n\tPer Kg: 690 BDT");
@@ -699,10 +699,10 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t6. Nestle Nido Fortigrow Full Cream Milk Powder\n\tPer Kg: 800 BDT\n");
         System.out.print("\n\t7. Starship Full Cream Milk Powder\n\tPer Kg: 520 BDT\n");
         System.out.print("\n\t8. Aarong Dairy Instant Low Fat Milk Powder\n\tPer Kg: 620 BDT\n");
-        System.out.print("\n\t9. Pran Full Cream Milk Powder\n\tPer Kg: 680 BDT\n");
+        System.out.print("\n\t9. Pran Full Cream Milk Powder\n\tPer Kg: 680 BDT\n\n");
     }
     public void softDrinksList() {
-        System.out.println("\n\t------------------------------------------------------");
+        System.out.println("\n\n\t------------------------------------------------------");
         System.out.println("\t                      S O F T -- D R I N K S                       ");
         System.out.println("\n\t------------------------------------------------------\n");
         System.out.print("\n\t1. Coca-Cola \n\tPer litre: 50 BDT");
@@ -711,12 +711,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         System.out.print("\n\t4. Mountain Dew\n\tPer litre: 50 BDT\n");
         System.out.print("\n\t5. Pran Up\n\tPer litre: 45 BDT\n");
         System.out.print("\n\t6. Clemon\n\tPer litre: 45 BDT\n");
-        System.out.print("\n\t7. Miranda Orange\n\tPer litre: 50 BDT\n");
+        System.out.print("\n\t7. Miranda Orange\n\tPer litre: 50 BDT\n\n");
     }
 
     public void BackGroMain(){
-        System.out.print("\tPress '1' for Back : ");
+        System.out.print("\n\tPress '1' for Back : ");
         int n;
+
         n = input.nextInt();
         if (n == 1) {
             GroMain();
@@ -736,14 +737,14 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         Electronics.showList2(); // this method shows 1. computer sub part like i. laptop, ii. desktop, iii. accessories
 
-        System.out.print("\tChoose another Option: ");
+        System.out.print("\n\tChoose another Option: ");
         int option3 = input.nextInt();
 
         if (option3 == 1) {
             laptopInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -751,12 +752,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+193);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -765,8 +766,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (option3 == 2) {
             desktopInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -774,12 +775,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+197);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -789,8 +790,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (option3 == 3) {
             accessoriesInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -798,7 +799,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 6) {
                         itemCode(code+ 201);
@@ -820,8 +821,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void backToComputerMainMethod()
     {
-        System.out.println("\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -834,8 +835,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     @Override
     public void BackLaptoTocomputerMain() {
-        System.out.println("\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -867,13 +868,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             System.out.println("\tDisply: " + laptopinfo[i].display);
             System.out.println("\tPrice: " + laptopinfo[i].price + "TK");
             System.out.println("\tRam: " + laptopinfo[i].ram + "GB");
-            System.out.println("");
+            System.out.println("\n");
         }
     }
 
     public void BackDesktopTocomputureMain() {
-        System.out.println("\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -904,7 +905,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             System.out.println("\tDisply: " + desktopinfo[i].display);
             System.out.println("\tPrice: " + desktopinfo[i].price + "TK");
             System.out.println("\tRam: " + desktopinfo[i].ram + "GB");
-            System.out.println("");
+            System.out.println("\n");
         }
 
     }
@@ -919,7 +920,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void BackAccessoriesTocomputerMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -940,15 +941,15 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         MobileName mobileName = new MobileNameInfo();
         mobileName.mobileName(); //Mobile name such as samsung, xiaomi, i-phone, Google
 
-        System.out.print("\tChoose another option: ");
+        System.out.print("\n\tChoose another option: ");
         int choice = input.nextInt();
 
         if (choice == 1) {
 
             samsungInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -956,12 +957,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+206);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -970,8 +971,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (choice == 2) {
 
             xiaomiInformation();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -979,20 +980,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+210);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             BackXiaomiTomobileMain();
         } else if (choice == 3) {
             iPhoneInformation();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1000,20 +1001,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+214);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             BackIPhoneTomobileMain();
         } else if (choice == 4) {
             googleInformation();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1021,12 +1022,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+218);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1054,12 +1055,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         Mobile samsung_ob4 = new Mobile("\t4. Samsung Galaxy  A52s 5G", "A52s 5G", "6.5\"", 25000, 8);
         samsung_ob4.showDisplay();
+        System.out.println("\n");
     }
 
     @Override
     public void BackSamsungtoTomobileMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1086,13 +1088,14 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         Mobile xiaomi_ob4 = new Mobile("\t4. Redmi Note 10 Pro (China)", "Note 10 Pro (China)", "6.6\"", 34000, 8);
         xiaomi_ob4.showDisplay();
+        System.out.println("\n");
     }
 
     @Override
     public void BackXiaomiTomobileMain() {
         System.out.println("\n\tPress '1' For back.");
 
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1119,13 +1122,14 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         Mobile iPhone_ob4 = new Mobile("\t4. Apple iPhone 12 Pro Max", "12 Pro Max", "6.1\"", 72000, 8);
         iPhone_ob4.showDisplay();
+        System.out.println("\n");
     }
 
     @Override
     public void BackIPhoneTomobileMain() {
         System.out.println("\n\tPress '1' For back.");
 
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1152,13 +1156,14 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         Mobile google_ob4 = new Mobile("\t4. Google Pixel 4", "Pixel 4", "6.3\"", 26000, 6);
         google_ob4.showDisplay();
+        System.out.println("\n");
     }
 
     @Override
     public void BackGoogleTomobileMain() {
         System.out.println("\n\tPress '1' For back.");
 
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1173,7 +1178,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     public void BackToElectronicsAllMedtod() {
         System.out.println("\n\tPress '1' For back.");
 
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1186,8 +1191,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void backToMobileMainMethod()
     {
-        System.out.println("\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.println("\n\tPress '1' For back.");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1208,15 +1213,15 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Other other_ob1 = new OtherInfo();
         other_ob1.othersName();//other parts
 
-        System.out.print("\tChoose another option: ");
+        System.out.print("\n\tChoose another option: ");
         int choice = input.nextInt();
 
         if (choice == 1) {
 
             TvInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1224,12 +1229,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+266);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1239,8 +1244,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
             AcInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1248,12 +1253,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+270);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1262,8 +1267,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (choice == 3) {
             cameraInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1271,12 +1276,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+274);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1285,8 +1290,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (choice == 4) {
             smartWatchInformation();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1294,12 +1299,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+278);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1324,7 +1329,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     @Override
     public void BackTvtoOtherInfoMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1347,7 +1352,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     @Override
     public void BackActoOtherInfoMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1370,7 +1375,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     @Override
     public void BackCameratoOtherInfoMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1393,7 +1398,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     @Override
     public void BackSmartWatchOtherInfoMain() {
         System.out.println("\n\tPress '1' For back.");
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1436,7 +1441,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
    MALE CLOTHES
    .............. */
     public void maleClothMain() {
-        System.out.println("Male Clothes: There are different types of clothes and it's price depends on it's quality.");
+        System.out.println("\n\n\tMale Clothes: There are different types of clothes and it's price depends on it's quality.\n");
         Male shirt = new Male("Hawaiian Shirt", 1500);
         Male jeans = new Male("Jeans", 2000);
         Male suit = new Male("Suit", 7000);
@@ -1451,16 +1456,17 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Male[] male = new Male[]{shirt, jeans, suit, tshirt, jacket, jersey, belt, shoes, watch, tie};
 
         for (int i = 0; i < male.length; i++) {
-            System.out.println("Product Name: " + male[i].name);
-            System.out.println("Product Price: " + male[i].price);
-            System.out.println("---------------------------");
+            System.out.println("\t"+i+1+" Product Name: " + male[i].name);
+            System.out.println("\t Product Price: " + male[i].price);
+            System.out.println("\t ---------------------------");
         }
+        System.out.println("\n");
     }
 
     public void BackToMaleClothMain() {
-        System.out.println("Press '0' For back :  ");
+        System.out.println("\n\tPress '0' For back :  ");
 
-        System.out.print("Choice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1477,7 +1483,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     .............. */
 
     public void femaleClothMain() {
-        System.out.println("Female Clothes: There are different types of clothes and it's price depends on it's quality.");
+        System.out.println("\n\n\tFemale Clothes: There are different types of clothes and it's price depends on it's quality.\b");
         Female salwarKamiz = new Female("Salwar Kamiz Three piece", 5000);
         Female saree = new Female("Saree", 35000);
         Female western = new Female("Modern and Western", 5000);
@@ -1492,16 +1498,17 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Female[] female = new Female[]{salwarKamiz, saree, western, muslimCollection, hoodie, girlsJacket, kurti, tribalTraditionalDresses, sneakers, ladiesBag};
 
         for (int i = 0; i < female.length; i++) {
-            System.out.println("Product Name: " + female[i].name);
-            System.out.println("Product Price: " + female[i].price);
-            System.out.println("---------------------------");
+            System.out.println("\t"+i+1+"Product Name: " + female[i].name);
+            System.out.println("\t Product Price: " + female[i].price);
+            System.out.println("\t ---------------------------");
         }
+        System.out.println("\n");
     }
 
     public void BackToFemaleClothMain() {
-        System.out.println("Press '0' For back   ");
+        System.out.println("\n\tPress '0' For back   ");
         //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1517,7 +1524,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     JEWELLERY
     .............. */
     public void jewelleryMain() {
-        System.out.println("Jewellery Collection.");
+        System.out.println("\n\n\tJewellery Collection.\n");
         Jewellery earrings = new Jewellery("Earrings", 150);
         Jewellery nosepin = new Jewellery("Nose Pin", 500);
         Jewellery necklaces = new Jewellery("Necklaces", 1000);
@@ -1528,16 +1535,17 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Jewellery[] jewellery = new Jewellery[]{earrings, nosepin, necklaces, curi, hairBand, payel};
 
         for (int i = 0; i < jewellery.length; i++) {
-            System.out.println("Product Name: " + jewellery[i].name);
-            System.out.println("Product Price: " + jewellery[i].price);
-            System.out.println(".............................");
+            System.out.println("\t"+i+1+"Product Name: " + jewellery[i].name);
+            System.out.println("\t Product Price: " + jewellery[i].price);
+            System.out.println("\t .............................");
         }
+        System.out.println("\n");
     }
 
     public void BackToJewelleryFemale() {
-        System.out.println("Press '0' For back   ");
+        System.out.println("\n\tPress '0' For back   ");
         //System.out.println("Press '11' main part -> : ");
-        System.out.print("Choice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -1552,13 +1560,13 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     public void clotheAllMethod() {
         Clothes.showList();
        // System.out.println("\t4.Back Previous ");
-        System.out.print("\tChoose your subcategory :  ");
+        System.out.print("\n\tChoose your subcategory :  ");
         int subcategory = input.nextInt();
 
         if (subcategory == 1) {
             maleClothMain();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1566,12 +1574,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 10) {
                         itemCode(code+168);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1579,8 +1587,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (subcategory == 2) {
             femaleClothMain();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1588,12 +1596,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 9) {
                         itemCode(code+179);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1602,8 +1610,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (subcategory == 3) {
             jewelleryMain();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1611,12 +1619,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 6) {
                         itemCode(code+187);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1632,9 +1640,9 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void furnitureShow() {
-        System.out.println("\n\t1. Bed\t\t\t\t2. Table\n\n\t3. Wardrobe\t\t\t4. Dresser\n\n\t5. Chair\t\t\t6. Sofa\n\n\t7. Cabinetry\t\t8. Ottoman\n\n\t9. Stool\t\t\t10. Chaise Longue\n\n\t\t11. Back \n");
+        System.out.println("\n\n\t1. Bed\t\t\t\t2. Table\n\n\t3. Wardrobe\t\t\t4. Dresser\n\n\t5. Chair\t\t\t6. Sofa\n\n\t7. Cabinetry\t\t8. Ottoman\n\n\t9. Stool\t\t\t10. Chaise Longue\n\n\t\t11. Back \n");
         System.out.println("\t---------------------------");
-        System.out.print("\tChoose your subcategory : ");
+        System.out.print("\n\tChoose your subcategory : ");
         // int subcategory = input.nextInt();
     }
 
@@ -1646,8 +1654,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
         if (subcategory == 1) {
             showBedProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1655,12 +1663,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.println("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 3) {
                         itemCode(code+222);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1669,8 +1677,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         } else if (subcategory == 2) {
             showTableProducts();
 
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1678,12 +1686,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+225);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1691,8 +1699,8 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             backToFurnitureMain();
         } else if (subcategory == 3) {
             showWardrobeProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1700,20 +1708,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+239);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 4) {
             showDresserProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1721,20 +1729,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 2) {
                         itemCode(code+243);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 5) {
             showChairProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1742,20 +1750,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+245);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 6) {
             showCouchProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1763,20 +1771,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 3) {
                         itemCode(code+249);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 7) {
             showCabinetryProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1784,20 +1792,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 3) {
                         itemCode(code+252);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 8) {
             showOttomanProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1805,20 +1813,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 3) {
                         itemCode(code+255);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 9) {
             showStoolProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1826,20 +1834,20 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 3) {
                         itemCode(code+259);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
             backToFurnitureMain();
         } else if (subcategory == 10) {
             showChaiseLongueProducts();
-            System.out.println("\t'0' For Back ");
-            System.out.print("\tEnter Number of Item that You Want to Buy : ");
+            System.out.println("\n\t'0' For Back ");
+            System.out.print("\n\tEnter Number of Item that You Want to Buy : ");
             item = input.nextInt();
             //takeItem(item);
             if (item == 0) {
@@ -1847,12 +1855,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
             } else {
                 for (int k = 0; k < item; k++) {
 
-                    System.out.println("\tEnter Code Numnber : ");
+                    System.out.print("\n\tEnter Code Numnber : ");
                     int code = input.nextInt();
                     if (code >= 1 && code <= 4) {
                         itemCode(code+262);
                     } else {
-                        System.out.println("\tOut of Range");
+                        System.out.println("\n\tOut of Range");
                     }
                 }
             }
@@ -1868,7 +1876,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     }
     public  void showBedProducts() {
-        System.out.println("\n\tBed: There are dozens of different types of beds.The price will be varies depends on the different quality.\n");
+        System.out.println("\n\n\tBed: There are dozens of different types of beds.The price will be varies depends on the different quality.\n");
 
         Bed mansionBed = new Bed("Mansion Bed", 34650);
         Bed lakerpolish = new Bed("Laker Polish Foam Box Bed/Khat", 27600);
@@ -1878,14 +1886,15 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Bed[] beds = new Bed[]{mansionBed, lakerpolish, stylish, medicated};
 
         for (int i = 0; i < beds.length; i++) {
-            System.out.println("\tProduct Name: " + beds[i].name);
-            System.out.println("\tProduct Price: " + beds[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1 +"Product Name: " + beds[i].name);
+            System.out.println(" \tProduct Price: " + beds[i].price);
+            System.out.println(" \t---------------------------\n");
         }
+        System.out.println("\n");
     }
 
     public  void showTableProducts() {
-        System.out.println("\n\tTable: There are dozens of different types of tables.The price will be varies depends on the different quality.\n");
+        System.out.println("\n\n\tTable: There are dozens of different types of tables.The price will be varies depends on the different quality.\n");
 
         Table malaysian = new Table("Malaysian Processed Wood Dinning Table set.", 32499);
         Table RFL = new Table("RFL Dinning Table-Restaurant Table", 2500);
@@ -1895,15 +1904,16 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Table[] Tables = new Table[]{malaysian, RFL, dinning, royal};
 
         for (int i = 0; i < Tables.length; i++) {
-            System.out.println("\tProduct Name: " + Tables[i].name);
-            System.out.println("\tProduct Price: " + Tables[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+" Product Name: " + Tables[i].name);
+            System.out.println(" \tProduct Price: " + Tables[i].price);
+            System.out.println("\t---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showWardrobeProducts() {
-        System.out.println("\n\tWardrobe: A Wardrobe Or Armoire is a closet usually equipped with a mirror,  drowers and other things used for storing clothes. There are dozens of different types of Wardrobe.The price will be varies depends on the different quality.\n");
+        System.out.println("\n\n\tWardrobe: A Wardrobe Or Armoire is a closet usually equipped with a mirror,  drowers and other things used for storing clothes. There are dozens of different types of Wardrobe.The price will be varies depends on the different quality.\n");
 
         Wardrobe malaysian = new Wardrobe("Wardrobe Malaysian", 12500);
         Wardrobe platinum = new Wardrobe("Platinum – Crown-5 Step", 8500);
@@ -1913,15 +1923,16 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Wardrobe[] wardrobes = new Wardrobe[]{malaysian, platinum, mini, rfl};
 
         for (int i = 0; i < wardrobes.length; i++) {
-            System.out.println("\tProduct Name: " + wardrobes[i].name);
-            System.out.println("\tProduct Price: " + wardrobes[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+"Product Name: " + wardrobes[i].name);
+            System.out.println(" \tProduct Price: " + wardrobes[i].price);
+            System.out.println(" \t---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showDresserProducts() {
-        System.out.println("\n\tDresser: A type of sideboard, often with shelves above drawers for the display of plates.\n");
+        System.out.println("\n\n\tDresser: A type of sideboard, often with shelves above drawers for the display of plates.\n");
 
         Dresser malaysian = new Dresser("Malaysian  Wood Dressing.", 3500);
         Dresser dressing = new Dresser("Dressing Table slim.", 1100);
@@ -1929,11 +1940,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Dresser[] dressers = new Dresser[]{malaysian, dressing};
 
         for (int i = 0; i < dressers.length; i++) {
-            System.out.println("\tProduct Name: " + dressers[i].name);
-            System.out.println("\tProduct Price: " + dressers[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+"Product Name: " + dressers[i].name);
+            System.out.println(" \tProduct Price: " + dressers[i].price);
+            System.out.println(" \t---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showChairProducts() {
@@ -1945,9 +1957,9 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Chair[] chairs = new Chair[]{regal, deko, caino, restaurantChair};
 
         for (int i = 0; i < chairs.length; i++) {
-            System.out.println("\tProduct Name: " + chairs[i].name);
-            System.out.println("\tProduct Price: " + chairs[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+"Product Name: " + chairs[i].name);
+            System.out.println(" \tProduct Price: " + chairs[i].price);
+            System.out.println(" \t---------------------------\n");
 
         }
     }
@@ -1960,11 +1972,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Couch[] couches = new Couch[]{nyxi, foldable, classic};
 
         for (int i = 0; i < couches.length; i++) {
-            System.out.println("\tProduct Name: " + couches[i].name);
-            System.out.println("\tProduct Price: " + couches[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+"Product Name: " + couches[i].name);
+            System.out.println(" \tProduct Price: " + couches[i].price);
+            System.out.println(" \t---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showCabinetryProducts() {
@@ -1975,11 +1988,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Cabinetry[] cabinetries = new Cabinetry[]{bedroom, kitchen, file};
 
         for (int i = 0; i < cabinetries.length; i++) {
-            System.out.println("\tProduct Name: " + cabinetries[i].name);
+            System.out.println("\t"+i+1+"Product Name: " + cabinetries[i].name);
             System.out.println("\tProduct Price: " + cabinetries[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showOttomanProducts() {
@@ -1991,11 +2005,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Ottoman[] ottomen = new Ottoman[]{woodAndFabricOttoman, nyxiFauxLeaderWhiteOttoman, foldableFabricOttoman, classicFoldingOttoman};
 
         for (int i = 0; i < ottomen.length; i++) {
-            System.out.println("\tProduct Name: " + ottomen[i].name);
-            System.out.println("\tProduct Price: " + ottomen[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+" Product Name: " + ottomen[i].name);
+            System.out.println("\t Product Price: " + ottomen[i].price);
+            System.out.println("\t ---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showStoolProducts() {
@@ -2006,11 +2021,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Stool[] stools = new Stool[]{wooden, squareShape, rflEasyStool};
 
         for (int i = 0; i < stools.length; i++) {
-            System.out.println("\tProduct Name: " + stools[i].name);
-            System.out.println("\tProduct Price: " + stools[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+" Product Name: " + stools[i].name);
+            System.out.println("\t Product Price: " + stools[i].price);
+            System.out.println("\t ---------------------------\n");
 
         }
+        System.out.println("\n");
     }
 
     public  void showChaiseLongueProducts() {
@@ -2022,17 +2038,17 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         ChaiseLongue[] chaiseLongues = new ChaiseLongue[]{wood, garden, living, vip};
 
         for (int i = 0; i < chaiseLongues.length; i++) {
-            System.out.println("\tProduct Name: " + chaiseLongues[i].name);
-            System.out.println("\tProduct Price: " + chaiseLongues[i].price);
-            System.out.println("\t---------------------------");
+            System.out.println("\t"+i+1+" Product Name: " + chaiseLongues[i].name);
+            System.out.println(" \tProduct Price: " + chaiseLongues[i].price);
+            System.out.println(" \t---------------------------\n");
 
         }
     }
 
     public void backToFurnitureMain() {
-        System.out.println("\tPress '1' For back ");
+        System.out.println("\n\tPress '1' For back ");
 
-        System.out.print("\tChoice Option : ");
+        System.out.print("\n\tChoice Option : ");
         int data;
         data = input.nextInt();
 
@@ -2050,7 +2066,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
             case 1:
                 System.out.println("\tShaad Chinigura Rice");
-                System.out.print("\tQuantity : ");
+                System.out.print("\n\tQuantity : ");
                 int data1 = input.nextInt();
                 basePrice = 130;
                 totalPrice += basePrice;
@@ -5550,7 +5566,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
 
     public void  preOrder()
     {
-        System.out.println("\n\tBelow This Product Comming soon \n");
+        System.out.println("\n\n\tBelow This Product Comming soon \n");
         System.out.println("\t---------------------------------\n");
 
         System.out.println("\t1. Hidden Cameras                        10000\n"+

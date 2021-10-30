@@ -28,7 +28,7 @@ public class Submain extends AllMethodsCombine{
     {
         obj2.takeInfo();
 
-        System.out.println("\n\tNow Log In and go Forward ");
+        System.out.println("\n\tNow Log In and see more features ");
         logIn();
 
     }
@@ -36,9 +36,9 @@ public class Submain extends AllMethodsCombine{
     {
         if(obj3.takeDataFromFile()) //that means true
         {
-            System.out.print("\n\t---------------");
-            System.out.print("\t   Go Forward  ");
-            System.out.print("\t---------------");
+//            System.out.print("\n\t---------------");
+//            System.out.print("\t   Go Forward  ");
+//            System.out.print("\t---------------");
             catagoriesPart();
 
         }
@@ -72,6 +72,7 @@ public class Submain extends AllMethodsCombine{
     //so called all functions technacally call here after log in
     public void catagoriesPart()
     {
+        System.out.println("\n\t-----Our project cetagories-----\n");
         System.out.println("\n\t1. Electronics \n\t2. Cloths\n\t3. Grocery\n\t4. Furniture\n\t5. Payment \n\t6. Exit\n");
 
         System.out.println("\t---------------------------------\n");
@@ -151,9 +152,10 @@ public class Submain extends AllMethodsCombine{
     public void subMainPart()
     {
 
-        System.out.println("\n\t*****************************");
-        System.out.println("\t-------------------------------");
-        System.out.println("\t---Welcome to E A S Y SHOP\n");
+        //System.out.println("\n\t*****************************");
+        System.out.println("\t-------------------------------\n");
+        System.out.println("\t-------------------------------\n");
+        System.out.println("\n\t---Welcome to E A S Y SHOP\n");
         System.out.println("\t---1. Registration \n");
         System.out.println("\t---2. Log In\n");
         System.out.println("\t---3. About Work\n");
@@ -320,32 +322,41 @@ public class Submain extends AllMethodsCombine{
         System.out.println("\n\t1. Self Delivery\t2. Home Delivery\n");
         System.out.print("\tEnter an Option = ");
 
-        int del = input.nextInt();
 
-        //SELF DELIVERY
-        if(del == 1)
+
+        try {
+            int del = input.nextInt();
+
+            //SELF DELIVERY
+            if(del == 1)
+            {
+                paymentCardOrMobile();
+                backClearPayment();
+            }
+            else if(del == 2)
+            {
+                System.out.print("\n\tEnter your House Distance : ");
+                int dis = input.nextInt();
+
+                totalCost += (dis * 100);
+
+                System.out.println("\tTotal Cost "+totalCost);
+                paymentCardOrMobile();
+                backClearPayment();
+            }
+
+
+            else
+            {
+                System.out.println("\n\tWrong Choice ");
+                clearPayment();
+            }
+
+        }catch (Exception e)
         {
-            paymentCardOrMobile();
-            backClearPayment();
-        }
-        else if(del == 2)
-        {
-            System.out.print("\n\tEnter your House Distance : ");
-            int dis = input.nextInt();
-
-            totalCost += (dis * 100);
-
-            System.out.println("\tTotal Cost "+totalCost);
-            paymentCardOrMobile();
-            backClearPayment();
+            System.out.println("\tEnter should an Integer Number\n");
         }
 
-
-        else
-        {
-            System.out.println("\n\tWrong Choice ");
-            clearPayment();
-        }
 
     }
     void backClearPayment()
@@ -354,16 +365,24 @@ public class Submain extends AllMethodsCombine{
         System.out.println("\n");
         System.out.print("\t'0' for Back\n");
         System.out.print("\tChoice Option = ");
-        int card = input.nextInt();
-        if(card == 0)
-        {
 
-            catagoriesPart();
-        }
-        else
-        {
-            backClearPayment();
-        }
+       try {
+           int card = input.nextInt();
+           if(card == 0)
+           {
+
+               catagoriesPart();
+           }
+           else
+           {
+               backClearPayment();
+           }
+       }catch (Exception e)
+       {
+           System.out.println("\tEnter should an Integer Number \n");
+       }
+
+
     }
 
     //Here All transection Occure . Like Payment methods are B-kas , nagad , Visa Card
@@ -374,69 +393,145 @@ public class Submain extends AllMethodsCombine{
 //       System.out.println("\t*********************************\n");
         System.out.println("\t---------------------------------\n");
         System.out.print("\tFor Payment Choice Option = ");
-        int card = input.nextInt();
+       int card ;
 
-        if(card == 1)
+        try {
+              card = input.nextInt();
+
+            if(card == 1)
+            {
+                System.out.println();
+
+                System.out.print("\n\tInsert Your Card Number : ");
+                //int visa = input.nextInt();
+
+                try {
+                    String visa1 = input.nextLine();
+
+                }catch (Exception e)
+                {
+                    System.out.println("\n\tCard number should be Int and String \n");
+                }
+
+                System.out.println("\n\t--------------------");
+                System.out.println("\tPayment Successfull ");
+                System.out.println("\t--------------------\n");
+
+                System.out.println("\tThank you for your Payment ");
+                totalCost = 0;
+            }
+            else if(card == 2)
+            {
+                System.out.println("\n\n");
+
+                System.out.print("\n\t1. B - K A S \n\t2. N A G A D \n\t3. R O C K E T\n");
+                System.out.println("\t------------------------------------------------------\n");
+                System.out.print("\tFor Payment Choice Option : ");
+
+                int visa = input.nextInt();
+                if(visa == 1)
+                {
+                    System.out.print("\tEnter your B-kas Number = ");
+                    // int bkas = input.nextInt();
+                    try {
+                        int bkas = input.nextInt();
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPhone number should be INTEGER\n");
+                    }
+                    System.out.print("\tEnter your  PIN  Number = ");
+                    //int bkasPin = input.nextInt();
+                    try {
+                        int bkasPin = input.nextInt();
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPIN  Number should be INTEGER\n");
+                    }
+                    System.out.println("\n\t--------------------");
+                    System.out.println("\tPayment Successfull ");
+                    System.out.println("\t--------------------\n");
+
+                    System.out.println("\tThank you for your Payment ");
+
+                    totalCost = 0;
+
+                }
+                else if(visa == 2)
+                {
+                    System.out.print("\tEnter your  Nagad Number =  ");
+
+                    try {
+                        int  nagad = input.nextInt();
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPhone number should be INTEGER\n");
+                    }
+
+                    System.out.print("\tEnter your  PIN  Number : ");
+
+                    try {
+                        int nagadPin = input.nextInt();
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPIN number should be INTEGER\n");
+                    }
+
+                    System.out.println("\n\t--------------------");
+                    System.out.println("\tPayment Successfull ");
+                    System.out.println("\t--------------------\n");
+
+                    System.out.println("\tThank you for your Payment ");
+                    totalCost = 0;
+                }
+                else if(visa == 3)
+                {
+                    System.out.print("\tEnter your  Rocket Number ");
+                    //int bkas = input.nextInt();
+                    try {
+                        int  nagad = input.nextInt();
+                        System.out.println("\n\t--------------------");
+                        System.out.println("\tPayment Successfull ");
+                        System.out.println("\t--------------------\n");
+
+                        System.out.println("\tThank you for your Payment ");
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPhone number should be INTEGER\n");
+                    }
+
+
+                    System.out.print("\tEnter your  PIN  Number ");
+                    //int bkasPin = input.nextInt();
+
+                    try {
+                        int rocketPin = input.nextInt();
+                        System.out.println("\n\t--------------------");
+                        System.out.println("\tPayment Successfull ");
+                        System.out.println("\t--------------------\n");
+
+                        System.out.println("\tThank you for your Payment ");
+
+                    }catch (Exception e)
+                    {
+                        System.out.println("\n\tPIN number should be INTEGER\n");
+                    }
+
+                    totalCost = 0;
+                }
+
+            }
+
+        }catch (Exception e)
         {
-            System.out.println();
-
-            System.out.print("\n\tInsert Your Card Number : ");
-            int visa = input.nextInt();
-
-            System.out.println("\n\t--------------------");
-            System.out.println("\tPayment Successfull ");
-            System.out.println("\t--------------------\n");
-
-            System.out.println("\tThank you for your Payment ");
+            System.out.println("\tEnter should an Integer Number\n");
         }
-        else if(card == 2)
-        {
-            System.out.println();
 
-            System.out.print("\n\t1. B - K A S \n\t2. N A G A D \n\t3. R O C K E T\n");
-            System.out.println("\t------------------------------------------------------\n");
-            System.out.print("\tFor Payment Choice Option : ");
 
-            int visa = input.nextInt();
-            if(visa == 1)
-            {
-                System.out.print("\tEnter your B-kas Number = ");
-                int bkas = input.nextInt();
-                System.out.print("\tEnter your  PIN  Number = ");
-                int bkasPin = input.nextInt();
-                System.out.println("\n\t--------------------");
-                System.out.println("\tPayment Successfull ");
-                System.out.println("\t--------------------\n");
-
-                System.out.println("\tThank you for your Payment ");
-
-            }
-            else if(visa == 2)
-            {
-                System.out.print("\tEnter your  Nagad Number =  ");
-                int bkas = input.nextInt();
-                System.out.print("\tEnter your  PIN  Number : ");
-                int bkasPin = input.nextInt();
-                System.out.println("\n\t--------------------");
-                System.out.println("\tPayment Successfull ");
-                System.out.println("\t--------------------\n");
-
-                System.out.println("\tThank you for your Payment ");
-            }
-            else if(visa == 3)
-            {
-                System.out.print("\tEnter your  Rocket Number ");
-                int bkas = input.nextInt();
-                System.out.print("\tEnter your  PIN  Number ");
-                int bkasPin = input.nextInt();
-                System.out.println("\n\t--------------------");
-                System.out.println("\tPayment Successfull ");
-                System.out.println("\t--------------------\n");
-
-                System.out.println("\tThank you for your Payment ");
-            }
-
-        }
     }
 
 }
