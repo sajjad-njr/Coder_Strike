@@ -1454,11 +1454,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Male tie = new Male("Tie", 1200);
 
         Male[] male = new Male[]{shirt, jeans, suit, tshirt, jacket, jersey, belt, shoes, watch, tie};
-
+        int var = 1;
         for (int i = 0; i < male.length; i++) {
-            System.out.println("\t"+i+1+" Product Name: " + male[i].name);
+            System.out.println("\t"+var+". Product Name: " + male[i].name);
             System.out.println("\t Product Price: " + male[i].price);
             System.out.println("\t ---------------------------");
+            var++;
         }
         System.out.println("\n");
     }
@@ -1496,11 +1497,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Female ladiesBag = new Female("Ladies Bag", 1400);
 
         Female[] female = new Female[]{salwarKamiz, saree, western, muslimCollection, hoodie, girlsJacket, kurti, tribalTraditionalDresses, sneakers, ladiesBag};
-
+            int var = 1;
         for (int i = 0; i < female.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + female[i].name);
+            System.out.println("\t"+var+". Product Name: " + female[i].name);
             System.out.println("\t Product Price: " + female[i].price);
             System.out.println("\t ---------------------------");
+            var++;
         }
         System.out.println("\n");
     }
@@ -1533,11 +1535,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Jewellery payel = new Jewellery("Payel", 200);
 
         Jewellery[] jewellery = new Jewellery[]{earrings, nosepin, necklaces, curi, hairBand, payel};
-
+            int var = 1;
         for (int i = 0; i < jewellery.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + jewellery[i].name);
+            System.out.println("\t"+var+". Product Name: " + jewellery[i].name);
             System.out.println("\t Product Price: " + jewellery[i].price);
             System.out.println("\t .............................");
+            var++;
         }
         System.out.println("\n");
     }
@@ -1640,7 +1643,7 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
     }
 
     public void furnitureShow() {
-        System.out.println("\n\n\t1. Bed\t\t\t\t2. Table\n\n\t3. Wardrobe\t\t\t4. Dresser\n\n\t5. Chair\t\t\t6. Sofa\n\n\t7. Cabinetry\t\t8. Ottoman\n\n\t9. Stool\t\t\t10. Chaise Longue\n\n\t\t11. Back \n");
+        System.out.println("\n\n\t1. Bed\t\t\t\t2. Table\n\n\t3. Wardrobe\t\t\t4. Dresser\n\n\t5. Chair\t\t\t6. Sofa\n\n\t7. Cabinetry\t\t8. Ottoman\n\n\t9. Stool\t\t\t10. Chaise Longue\n\n\t11. Back \n");
         System.out.println("\t---------------------------");
         System.out.print("\n\tChoose your subcategory : ");
         // int subcategory = input.nextInt();
@@ -1884,11 +1887,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Bed medicated = new Bed("Medicated & Solid Wood Box Bed", 11074);
 
         Bed[] beds = new Bed[]{mansionBed, lakerpolish, stylish, medicated};
-
+        int var = 1;
         for (int i = 0; i < beds.length; i++) {
-            System.out.println("\t"+i+1 +"Product Name: " + beds[i].name);
+            System.out.println("\t"+var +". Product Name: " + beds[i].name);
             System.out.println(" \tProduct Price: " + beds[i].price);
             System.out.println(" \t---------------------------\n");
+            var++;
         }
         System.out.println("\n");
     }
@@ -1902,11 +1906,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Table royal = new Table("RFL Royal Coffee Table", 1700);
 
         Table[] Tables = new Table[]{malaysian, RFL, dinning, royal};
-
+        int var = 1;
         for (int i = 0; i < Tables.length; i++) {
-            System.out.println("\t"+i+1+" Product Name: " + Tables[i].name);
+            System.out.println("\t"+var+". Product Name: " + Tables[i].name);
             System.out.println(" \tProduct Price: " + Tables[i].price);
             System.out.println("\t---------------------------\n");
+            var++;
 
         }
         System.out.println("\n");
@@ -1921,12 +1926,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Wardrobe rfl = new Wardrobe("RFL Black & Gold Wardrobe", 5600);
 
         Wardrobe[] wardrobes = new Wardrobe[]{malaysian, platinum, mini, rfl};
-
+        int var = 1;
         for (int i = 0; i < wardrobes.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + wardrobes[i].name);
+            System.out.println("\t"+var+". Product Name: " + wardrobes[i].name);
             System.out.println(" \tProduct Price: " + wardrobes[i].price);
             System.out.println(" \t---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -1938,12 +1943,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Dresser dressing = new Dresser("Dressing Table slim.", 1100);
 
         Dresser[] dressers = new Dresser[]{malaysian, dressing};
-
+        int var = 1;
         for (int i = 0; i < dressers.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + dressers[i].name);
+            System.out.println("\t"+var+". Product Name: " + dressers[i].name);
             System.out.println(" \tProduct Price: " + dressers[i].price);
             System.out.println(" \t---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -1955,12 +1960,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Chair restaurantChair = new Chair("Restaurant chair", 650);
 
         Chair[] chairs = new Chair[]{regal, deko, caino, restaurantChair};
-
+        int var = 1;
         for (int i = 0; i < chairs.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + chairs[i].name);
+            System.out.println("\t"+var+". Product Name: " + chairs[i].name);
             System.out.println(" \tProduct Price: " + chairs[i].price);
             System.out.println(" \t---------------------------\n");
-
+            var++;
         }
     }
 
@@ -1970,12 +1975,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Couch classic = new Couch("Classic Folding Ottoman", 9013);
 
         Couch[] couches = new Couch[]{nyxi, foldable, classic};
-
+        int var = 1;
         for (int i = 0; i < couches.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + couches[i].name);
+            System.out.println("\t"+var+". Product Name: " + couches[i].name);
             System.out.println(" \tProduct Price: " + couches[i].price);
             System.out.println(" \t---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -1986,12 +1991,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Cabinetry file = new Cabinetry("File Cabinet", 9013);
 
         Cabinetry[] cabinetries = new Cabinetry[]{bedroom, kitchen, file};
-
+        int var = 1;
         for (int i = 0; i < cabinetries.length; i++) {
-            System.out.println("\t"+i+1+"Product Name: " + cabinetries[i].name);
+            System.out.println("\t"+var+". Product Name: " + cabinetries[i].name);
             System.out.println("\tProduct Price: " + cabinetries[i].price);
             System.out.println("\t---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -2003,12 +2008,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Ottoman classicFoldingOttoman = new Ottoman("Classic Folding Ottoman", 9013);
 
         Ottoman[] ottomen = new Ottoman[]{woodAndFabricOttoman, nyxiFauxLeaderWhiteOttoman, foldableFabricOttoman, classicFoldingOttoman};
-
+        int var = 1;
         for (int i = 0; i < ottomen.length; i++) {
-            System.out.println("\t"+i+1+" Product Name: " + ottomen[i].name);
+            System.out.println("\t"+var+". Product Name: " + ottomen[i].name);
             System.out.println("\t Product Price: " + ottomen[i].price);
             System.out.println("\t ---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -2019,12 +2024,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         Stool rflEasyStool = new Stool("RFL Easy Stool", 70);
 
         Stool[] stools = new Stool[]{wooden, squareShape, rflEasyStool};
-
+        int var = 1;
         for (int i = 0; i < stools.length; i++) {
-            System.out.println("\t"+i+1+" Product Name: " + stools[i].name);
+            System.out.println("\t"+var+". Product Name: " + stools[i].name);
             System.out.println("\t Product Price: " + stools[i].price);
             System.out.println("\t ---------------------------\n");
-
+            var++;
         }
         System.out.println("\n");
     }
@@ -2036,12 +2041,12 @@ public class AllMethodsCombine implements ElectronicsMedthods , ClothesMethods ,
         ChaiseLongue vip = new ChaiseLongue("VIP waiting  Chaise Longue", 6377);
 
         ChaiseLongue[] chaiseLongues = new ChaiseLongue[]{wood, garden, living, vip};
-
+        int var = 1;
         for (int i = 0; i < chaiseLongues.length; i++) {
-            System.out.println("\t"+i+1+" Product Name: " + chaiseLongues[i].name);
+            System.out.println("\t"+var+". Product Name: " + chaiseLongues[i].name);
             System.out.println(" \tProduct Price: " + chaiseLongues[i].price);
             System.out.println(" \t---------------------------\n");
-
+            var++;
         }
     }
 

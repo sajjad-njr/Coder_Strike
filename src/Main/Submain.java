@@ -73,7 +73,7 @@ public class Submain extends AllMethodsCombine{
     public void catagoriesPart()
     {
         System.out.println("\n\t-----Our project cetagories-----\n");
-        System.out.println("\n\t1. Electronics \n\t2. Cloths\n\t3. Grocery\n\t4. Furniture\n\t5. Payment \n\t6. Exit\n");
+        System.out.println("\n\t1. Electronics \n\t2. Cloths\n\t3. Grocery\n\t4. Furniture\n\t5. Payment \n\t6. Log out\n");
 
         System.out.println("\t---------------------------------\n");
         int var;
@@ -245,7 +245,8 @@ public class Submain extends AllMethodsCombine{
             System.out.println("\n\t---You did not buy anything yet .!!");
 
             System.out.println("\n\t---If we want to buy daily goods press '1'");
-            System.out.println("\t---Show Pre Order  ITEM press '2'\n");
+            System.out.println("\t---Show Pre Order  ITEM press '2'");
+            System.out.println("\t--- Back for press '3'\n");
             System.out.print("\t---Choice an Option :  ");
 
 
@@ -253,32 +254,63 @@ public class Submain extends AllMethodsCombine{
 
             if(var1 == 1)
             {
-                catagoriesPart();
+                backPaymentMake();
+                //catagoriesPart();
+//                System.out.println("\n\t7. back from payment ");
+//                int var11 = input.nextInt();
+//                backPaymentMake();
             }
             else if(var1 == 2)
             {
                 preOrder();
-                preOrderGiva();
-                backCatagories();
+                preOrderGiva(); // Giva = given
+                backPaymentMake();
+                //backCatagories();
+            }
+            else if(var1 == 3)
+            {
+                catagoriesPart();
             }
 
         }
         else
         {
-            takenItemPrint();
+            takenItemPrint();//purchase history
             clearPayment();
             backCatagories();
         }
 
     }
 
-    void preOrderGiva()
+    void backPaymentMake()
+    {
+        System.out.println("\n\t--- '1' For back\n\t--- '2' for see more features \n");
+        System.out.print("\n\tChoice an option : ");
+        int a = input.nextInt();
+        if(a==1)
+        {
+            paymentMake();
+        }
+        else if(a == 2)
+        {
+            catagoriesPart();
+        }
+        else
+        {
+            backPaymentMake();
+        }
+    }
+    void preOrderGiva() //Giva = given
     {
         System.out.println("\t'0' for back \n");
         System.out.print("\tEnter Number of Item that You Want to Buy : ");
         item = input.nextInt();
 
-        if(item == 0)catagoriesPart();
+        if(item == 0)
+        {
+            //catagoriesPart();
+            paymentMake();
+        }
         else
         {
             for (int k = 0; k < item; k++) {
