@@ -1,7 +1,7 @@
-# CodersStrike
+# CodersStrike ( Team name ) 
 This project is about an Online Easy shopping ( consol based project) where our prime aim is to apply all OOP concept that we learn throught out the season rather than the  output  .
 
-#Features 
+# Features of This Project 
 - Products stored by Category 
 - Order multiple Item at a time 
 - Output show the total cost 
